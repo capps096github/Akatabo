@@ -6,7 +6,9 @@ class AppImage extends StatelessWidget {
     super.key,
     required this.imageUrl,
     this.borderRadius = BorderRadius.zero,
-    this.fit = BoxFit.cover, this.width, this.height,
+    this.fit = BoxFit.cover,
+    this.width,
+    this.height,
   });
 
   final String imageUrl;

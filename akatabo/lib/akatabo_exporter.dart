@@ -19,6 +19,12 @@ export 'package:google_fonts/google_fonts.dart';
 // animations
 export 'package:animations/animations.dart';
 
+// text animations
+export 'package:animated_text_kit/animated_text_kit.dart';
+
+// flutter_rating_bar
+export 'package:flutter_rating_bar/flutter_rating_bar.dart';
+
 //? app folders
 //* app
 export 'app/exporter.dart';

@@ -6,9 +6,9 @@ class Akatabo extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    //TODO go router access to build the app
-    // final goRouter = ref.watch(akataboRouterProvider);
-    final goRouter = goRouterProvider;
+    final goRouter = ref.watch(goRouterProvider);
+
+    final akataboTheme = ref.watch(akataboThemeProvider);
 
     return MaterialApp.router(
       // -- Router --

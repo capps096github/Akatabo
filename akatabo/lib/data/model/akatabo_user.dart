@@ -20,7 +20,11 @@ class AkataboUser {
   // billing details (class later)
   final String billingDetails;
 
+  // user id
+  final String userId;
+
   AkataboUser({
+    required this.userId,
     required this.profilePic,
     required this.username,
     required this.email,
@@ -38,4 +42,3 @@ class AkataboUser {
     return 'AkataboUser(profilePic: $profilePic, username: $username, email: $email, phone: $phone, levelOfEduc: $levelOfEduc, address: $address, billingDetails: $billingDetails)';
   }
 }
-

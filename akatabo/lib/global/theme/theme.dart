@@ -1,19 +1,17 @@
 import '../../akatabo_exporter.dart';
 
-// TODO make this provider based by generating the theme provider in the provider folder
-final akataboTheme = AkataboTheme.light;
-
 class AkataboTheme {
   static ThemeData get light {
     // text theme
     final TextTheme textTheme = ThemeData.light().textTheme;
 
-    const textStyleFunction = GoogleFonts.lato;
+    const textStyleFunction = GoogleFonts.nunitoSans;
 
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
       colorSchemeSeed: akataboColor,
+      scaffoldBackgroundColor: akataboBackground,
       //* -- Visual Density
       visualDensity: VisualDensity.adaptivePlatformDensity,
       //* -- Appbar
@@ -22,7 +20,7 @@ class AkataboTheme {
         iconTheme: const IconThemeData(
           color: akataboSecondaryColor,
         ),
-        backgroundColor: akataboWhite,
+        backgroundColor: akataboBackground,
         titleTextStyle: textStyleFunction(
           fontSize: 20,
           fontWeight: FontWeight.w700,

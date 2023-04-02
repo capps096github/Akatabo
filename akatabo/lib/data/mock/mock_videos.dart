@@ -1,0 +1,78 @@
+// list of AkataboVideo
+import '../../akatabo_exporter.dart';
+
+//
+List<AkataboVideo> akataboVideos = [
+  AkataboVideo(
+    videoID: '1',
+    title: 'Seed Germination',
+    description: 'An illustrative video showing and explaining the germination process.',
+    userId: '1',
+    videoUrl: defaultVideoUrl,
+    thumbnailUrl: defaultThumbnail,
+    rating: 4.5,
+  ),
+  AkataboVideo(
+    videoID: '2',
+    title: 'Preparation of Oxygen',
+    description: 'laboratory preparation of oxygen from hydrogen peroxide and magnanese dioxide.',
+    userId: '1',
+    videoUrl: defaultVideoUrl,
+    thumbnailUrl: defaultThumbnail,
+    rating: 4.5,
+  ),
+  AkataboVideo(
+    videoID: '3',
+    title: 'Akatabo Video 3',
+    description: 'Akatabo Video 3 Description',
+    userId: '1',
+    videoUrl: defaultVideoUrl,
+    thumbnailUrl: defaultThumbnail,
+    rating: 4.5,
+  ),
+  AkataboVideo(
+    videoID: '4',
+    title: 'Akatabo Video 4',
+    description: 'Akatabo Video 4 Description',
+    userId: '1',
+    videoUrl: defaultVideoUrl,
+    thumbnailUrl: defaultThumbnail,
+    rating: 4.5,
+  ),
+  AkataboVideo(
+    videoID: '5',
+    title: 'Seed Germination',
+    description: 'An illustrative video showing and explaining the germination process.',
+    userId: '1',
+    videoUrl: defaultVideoUrl,
+    thumbnailUrl: defaultThumbnail,
+    rating: 4.5,
+  ),
+  AkataboVideo(
+    videoID: '6',
+    title: 'Preparation of Oxygen',
+    description: 'laboratory preparation of oxygen from hydrogen peroxide and magnanese dioxide.',
+    userId: '1',
+    videoUrl: defaultVideoUrl,
+    thumbnailUrl: defaultThumbnail,
+    rating: 4.5,
+  ),
+  AkataboVideo(
+    videoID: '7',
+    title: 'Akatabo Video 7',
+    description: 'Akatabo Video 7 Description',
+    userId: '1',
+    videoUrl: defaultVideoUrl,
+    thumbnailUrl: defaultThumbnail,
+    rating: 4.5,
+  ),
+  AkataboVideo(
+    videoID: '8',
+    title: 'Akatabo Video 8',
+    description: 'Akatabo Video 8 Description',
+    userId: '1',
+    videoUrl: defaultVideoUrl,
+    thumbnailUrl: defaultThumbnail,
+    rating: 4.5,
+  ),
+];

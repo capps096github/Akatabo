@@ -5,10 +5,13 @@ App Template Variables *As Entered By You
 
 - App Name:  akatabo
 
-- App Description: 
+- App Description: Akatabo | The school library in the palm of your hands. Is a digital library that provides access to a wide range of books, magazines, newspapers, and other reading materials to students.
 
 - App Title: Akatabo | The school library in the palm of your hands.
 
 - Primary Color: 7F00FF
 
 - Secondary Color: 200E32
+
+
+Run the command `flutter pub run build_runner watch -d` to generate riverpod files and finish the setup.

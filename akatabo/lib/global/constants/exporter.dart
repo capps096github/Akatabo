@@ -7,3 +7,4 @@ export 'padding.dart';
 export 'platforms.dart';
 export 'spacing.dart';
 export 'strings.dart';
+export 'font_sizes.dart';

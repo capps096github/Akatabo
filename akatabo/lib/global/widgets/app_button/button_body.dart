@@ -31,9 +31,8 @@ class ButtonBody extends ConsumerWidget {
 
     final width = MediaQuery.of(context).size.width;
 
-    // TODO responsiveness
-    // final akataboResponsive = ref.watch(akataboResponsiveProvider(context));
-    final akataboResponsive = AkataboResponsive(context: context);
+    final akataboResponsive = ref.watch(akataboResponsiveProvider(context));
+    //  final akataboResponsive = AkataboResponsive(context: context);
 
     final isDesktop = akataboResponsive.isDesktopScreen;
 

@@ -1,10 +1,9 @@
 import '../../akatabo_exporter.dart';
 
 ///* this provides the default router delegate for the app
-// TODO make this a provider under providers/go_router_provider.dart
 
 // router delegate
-final goRouterProvider = GoRouter(
+final akataboRouter = GoRouter(
   initialLocation: initialPath,
   restorationScopeId: akataboAppId,
   // turn off history tracking in the browser for all navigation

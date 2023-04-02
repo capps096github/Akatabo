@@ -4,6 +4,8 @@ AppBar homeAppBar(BuildContext context) {
 //
   return AppBar(
     title: const Text('Akatabo'),
+    elevation: 0,
+    scrolledUnderElevation: 0,
     leading: IconButton(
       icon: const Icon(Icons.menu),
       onPressed: () {

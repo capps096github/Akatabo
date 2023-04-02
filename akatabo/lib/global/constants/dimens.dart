@@ -12,3 +12,6 @@ const double kButtonHeight = 42.0;
 
 // desktop button height
 const double kDesktopButtonHeight = 56.0;
+
+// maxVideoHeight
+const double maxVideoHeight = 450.0;
