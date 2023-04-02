@@ -1,0 +1,14 @@
+-------------------- 
+App Template Variables *As Entered By You
+--------------------
+
+
+- App Name:  akatabo
+
+- App Description: 
+
+- App Title: Akatabo | The school library in the palm of your hands.
+
+- Primary Color: 7F00FF
+
+- Secondary Color: 200E32
