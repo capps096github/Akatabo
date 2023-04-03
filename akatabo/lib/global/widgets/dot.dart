@@ -3,8 +3,8 @@ import '../../akatabo_exporter.dart';
 /// THis is a dot in a bullet=like format
 ///
 
-class AkataboDot extends StatelessWidget {
-  const AkataboDot({
+class Dot extends StatelessWidget {
+  const Dot({
     super.key,
     this.dotColor = akataboColor,
     this.dotDiameter = spacing8,

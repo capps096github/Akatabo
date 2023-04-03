@@ -12,3 +12,6 @@ const defaultThumbnail = 'https://images.unsplash.com/photo-1533327325824-76bc4e
 
 // default video url
 const defaultVideoUrl = 'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4';
+
+// userProfileTag
+const String userProfileTag = 'userProfile';

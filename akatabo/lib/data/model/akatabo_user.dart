@@ -9,7 +9,7 @@ class AkataboUser {
   final String email;
 
   // phone
-  final String phone;
+  final String phoneNumber;
 
   // level of Education (this could be a class in the future but for now use a string)
   final String levelOfEduc;
@@ -28,7 +28,7 @@ class AkataboUser {
     required this.profilePic,
     required this.username,
     required this.email,
-    required this.phone,
+    required this.phoneNumber,
     required this.levelOfEduc,
     required this.address,
     required this.billingDetails,
@@ -37,8 +37,16 @@ class AkataboUser {
   /// first name
   String get firstName => username.split(' ')[0];
 
+  /// billing details info, this shows the first 3 and last 1 digits of the billingDetails
+  /// e.g 1234567890 => 123******0
+  String get billingDetailsInfo {
+    final first3 = billingDetails.substring(0, 3);
+    final last1 = billingDetails.substring(billingDetails.length - 1);
+    return '$first3******$last1';
+  }
+
   @override
   String toString() {
-    return 'AkataboUser(profilePic: $profilePic, username: $username, email: $email, phone: $phone, levelOfEduc: $levelOfEduc, address: $address, billingDetails: $billingDetails)';
+    return 'AkataboUser(profilePic: $profilePic, username: $username, email: $email, phone: $phoneNumber, levelOfEduc: $levelOfEduc, address: $address, billingDetails: $billingDetails)';
   }
 }

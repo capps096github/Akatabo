@@ -28,9 +28,7 @@ class HorizontalSpace extends StatelessWidget {
 
 class EmptySpace extends StatelessWidget {
   ///Adds Empty space
-  const EmptySpace({super.key, required this.of});
-
-  final double of;
+  const EmptySpace({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,12 +52,10 @@ class SliverVerticalSpace extends StatelessWidget {
 
 class SliverEmptySpace extends StatelessWidget {
   ///Adds Empty space in Sliver Widgets
-  const SliverEmptySpace({super.key, required this.of});
-
-  final double of;
+  const SliverEmptySpace({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(child: EmptySpace(of: of));
+    return const SliverToBoxAdapter(child: EmptySpace());
   }
 }

@@ -1,5 +1,8 @@
 // * Spacing Constants following the 8pt grid system
 
+///72 spacing
+const double spacing72 = 72.0;
+
 /// 40 spacing = 40.0
 const double spacing40 = 40.0;
 

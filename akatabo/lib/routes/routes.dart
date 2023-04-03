@@ -21,7 +21,11 @@ final akataboRouter = GoRouter(
       builder: (context, state) => const AkataboAuth(),
     ),
 
-    //* user
+    //* profile
+    GoRoute(
+      path: profilePath,
+      builder: (context, state) => const UserProfile(),
+    ),
 
     // * settings
     GoRoute(

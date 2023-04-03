@@ -15,3 +15,9 @@ const double kDesktopButtonHeight = 56.0;
 
 // maxVideoHeight
 const double maxVideoHeight = 450.0;
+
+// navbarHeight
+const double navbarHeight = 56.0;
+
+// profile clipper height
+const double profileClipperHeight = 100.0;

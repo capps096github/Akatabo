@@ -29,9 +29,9 @@ class AkataboTheme {
       ),
       //* -- tooltip
       tooltipTheme: const TooltipThemeData(
-        textStyle: TextStyle(color: akataboColor),
+        textStyle: TextStyle(color: akataboWhite),
         decoration: BoxDecoration(
-          color: akataboSecondaryColor,
+          color: akataboColor,
           borderRadius: borderRadius4,
         ),
       ),

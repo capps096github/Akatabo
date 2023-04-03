@@ -18,8 +18,14 @@ const double fontSize18 = 18.0;
 /// 16 fontSize = 16.0
 const double fontSize16 = 16.0;
 
+// 14 fontSize = 14.0
+const double fontSize14 = 14.0;
+
 // 12 fontSize = 12.0
 const double fontSize12 = 12.0;
+
+// 10 fontSize = 10.0
+const double fontSize10 = 10.0;
 
 /// 8 fontSize = 8.0
 const double fontSize8 = 8.0;

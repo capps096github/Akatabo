@@ -5,6 +5,25 @@ class AkataboSettings extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        // go to home
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: akataboWhite,
+          ),
+          onPressed: () => context.go(profilePath),
+        ),
+        title: const Text(
+          'Settings',
+          style: TextStyle(color: akataboWhite),
+        ),
+        backgroundColor: akataboSecondaryColor,
+      ),
+      body: const Center(
+        child: Text('Settings'),
+      ),
+    );
   }
 }

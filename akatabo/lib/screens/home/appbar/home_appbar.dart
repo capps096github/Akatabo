@@ -13,13 +13,24 @@ AppBar homeAppBar(BuildContext context) {
       },
     ),
     actions: [
+      // profile
       Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: AppImage(
-          imageUrl: akataboDefaultUser.profilePic,
+        padding: padding8,
+        child: InkWell(
+          onTap: () {
+            // navigate to the profile page
+            context.push(profilePath);
+          },
           borderRadius: borderRadius4,
-          width: 40,
-          height: 40,
+          child: Hero(
+            tag: userProfileTag,
+            child: AppImage(
+              imageUrl: akataboDefaultUser.profilePic,
+              borderRadius: borderRadius4,
+              width: spacing40,
+              height: spacing40,
+            ),
+          ),
         ),
       )
     ],

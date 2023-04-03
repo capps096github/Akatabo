@@ -25,7 +25,7 @@ class SectionTitle extends StatelessWidget {
           highlightColor: akataboColor.withOpacity(.1),
           child: Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: spacing4,
+              horizontal: spacing8,
               vertical: spacing8,
             ),
             child: Row(
