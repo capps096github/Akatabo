@@ -1,14 +1,10 @@
 import '../../../../akatabo_exporter.dart';
-import 'video_info.dart';
-import 'video_thumbnail.dart';
+import 'book_info.dart';
 
-class VideoTile extends StatelessWidget {
-  const VideoTile({
-    Key? key,
-    required this.videoPost,
-  }) : super(key: key);
-// video
-  final AkataboVideo videoPost;
+class BookTile extends StatelessWidget {
+  const BookTile({super.key, required this.akataBook});
+
+  final AkataBook akataBook;
 
   @override
   Widget build(BuildContext context) {
@@ -33,18 +29,16 @@ class VideoTile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              ClipRRect(
+              AppImage(
+                imageUrl: akataBook.coverImage,
                 borderRadius: borderRadius8,
-                child: SizedBox(
-                  width: 80,
-                  height: 80,
-                  child: VideoThumbnail(videoPost: videoPost),
-                ),
+                width: 80,
+                height: 80,
               ),
               //
               const HorizontalSpace(of: spacing8),
               //
-              VideoInfo(videoPost: videoPost),
+              BookInfo(akataBook: akataBook),
               //
             ],
           ),

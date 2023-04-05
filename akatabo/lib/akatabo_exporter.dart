@@ -25,6 +25,12 @@ export 'package:animated_text_kit/animated_text_kit.dart';
 // flutter_rating_bar
 export 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+// percent_indicator
+export 'package:percent_indicator/percent_indicator.dart';
+
+// uuid
+export 'package:uuid/uuid.dart';
+
 //? app folders
 //* app
 export 'app/exporter.dart';

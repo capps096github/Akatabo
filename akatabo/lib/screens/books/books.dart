@@ -1,10 +1,9 @@
 import '../../akatabo_exporter.dart';
-import 'components/exporter.dart';
+import 'components/recent_books_list.dart';
+import 'components/your_books.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({
-    super.key,
-  });
+class AkataboBooks extends StatelessWidget {
+  const AkataboBooks({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +13,6 @@ class HomePage extends StatelessWidget {
         slivers: [
           const SliverVerticalSpace(of: spacing16),
 
-          // text
-          const GreetingIntro(),
-
           const SliverVerticalSpace(of: spacing16),
 
           // search
@@ -24,18 +20,17 @@ class HomePage extends StatelessWidget {
           const SliverVerticalSpace(of: spacing16),
 
           // title
-          SectionTitle(title: "Categories", onTap: () {}),
+          SectionTitle(title: "Recent", onTap: () {}),
 
-          // categories
-          const CategoriesGrid(),
+          const RecentBooksList(),
 
           const SliverVerticalSpace(of: spacing16),
 
           // title
-          SectionTitle(title: "Videos for You", onTap: () {}),
+          SectionTitle(title: "Your Books", onTap: () {}),
 
-          // videos
-          const VideosList(),
+          // your books
+          const YourBooks(),
         ],
       ),
     );

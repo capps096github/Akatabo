@@ -15,3 +15,6 @@ const defaultVideoUrl = 'https://flutter.github.io/assets-for-api-docs/assets/vi
 
 // userProfileTag
 const String userProfileTag = 'userProfile';
+
+// default book cover
+const defaultBookCover = 'https://images.unsplash.com/photo-1598618443855-232ee0f819f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60';

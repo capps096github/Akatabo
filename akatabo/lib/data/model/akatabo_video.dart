@@ -1,3 +1,5 @@
+import 'package:uuid/uuid.dart';
+
 class AkataboVideo {
   // id
   final String videoID;
@@ -23,14 +25,13 @@ class AkataboVideo {
   // views
 
   AkataboVideo({
-    required this.videoID,
     required this.title,
     required this.description,
     required this.userId,
     required this.videoUrl,
     required this.thumbnailUrl,
     required this.rating,
-  });
+  }) : videoID = const Uuid().v4();
 
   // postedBy, get this from the user id for now put by @userid, buh later on it will be changed
   String get postedBy => '@$userId';

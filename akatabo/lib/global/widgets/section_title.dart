@@ -1,4 +1,4 @@
-import '../../../akatabo_exporter.dart';
+import '../../akatabo_exporter.dart';
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({

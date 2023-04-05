@@ -8,6 +8,9 @@ const circularRadius16 = Radius.circular(spacing16);
 // 8 circular radius
 const circularRadius8 = Radius.circular(spacing8);
 
+// 6 circular radius
+const circularRadius6 = Radius.circular(6);
+
 // 4 circular radius
 const circularRadius4 = Radius.circular(spacing4);
 
@@ -21,6 +24,9 @@ const borderRadius16 = BorderRadius.all(circularRadius16);
 
 // border radius 8
 const borderRadius8 = BorderRadius.all(circularRadius8);
+
+// border radius 6
+const borderRadius6 = BorderRadius.all(circularRadius6);
 
 // border radius 4
 const borderRadius4 = BorderRadius.all(circularRadius4);

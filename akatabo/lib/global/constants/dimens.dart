@@ -21,3 +21,12 @@ const double navbarHeight = 56.0;
 
 // profile clipper height
 const double profileClipperHeight = 100.0;
+
+// recent books height
+const double recentBooksHeight = 232.0;
+
+// recent books width
+const double recentBooksWidth = 120.0;
+
+// recent books cover height
+const double recentBooksCoverHeight = 184.0;

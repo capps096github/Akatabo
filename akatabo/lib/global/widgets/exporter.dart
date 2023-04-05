@@ -8,3 +8,4 @@ export 'entrance_fader.dart';
 export 'placeholder.dart';
 export 'spaces.dart';
 export 'error_placeholder.dart';
+export 'section_title.dart';

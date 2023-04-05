@@ -1,8 +1,10 @@
+import 'package:uuid/uuid.dart';
+
 class BookCategory {
   // title
   final String title;
 
-  // id
+  //TODO asssign id
   final String id;
 
   // image
@@ -19,5 +21,5 @@ class BookCategory {
     required this.image,
     required this.colorCode,
     required this.bookIds,
-  }) : id = title.toLowerCase().replaceAll(' ', '_');
+  }) : id = const Uuid().v4();
 }

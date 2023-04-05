@@ -2,4 +2,4 @@
 
 import '../../../akatabo_exporter.dart';
 
-final selectedNavBarIndexProvider = StateProvider<int>((ref) => 0);
+final selectedNavBarIndexProvider = StateProvider<int>((ref) => 2);

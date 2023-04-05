@@ -32,7 +32,9 @@ class AkataboUser {
     required this.levelOfEduc,
     required this.address,
     required this.billingDetails,
-  });
+  })
+  // : userId = const FirebaseAuth.instance.currentUser!.uid get id from here
+  ;
 
   /// first name
   String get firstName => username.split(' ')[0];

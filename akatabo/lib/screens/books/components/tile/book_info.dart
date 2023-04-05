@@ -1,12 +1,12 @@
 import '../../../../akatabo_exporter.dart';
 
-class VideoInfo extends StatelessWidget {
-  const VideoInfo({
+class BookInfo extends StatelessWidget {
+  const BookInfo({
     super.key,
-    required this.videoPost,
+    required this.akataBook,
   });
 
-  final AkataboVideo videoPost;
+  final AkataBook akataBook;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class VideoInfo extends StatelessWidget {
           Padding(
             padding: padding2,
             child: Text(
-              videoPost.title,
+              akataBook.title,
               maxLines: 1,
               style: const TextStyle(
                 overflow: TextOverflow.ellipsis,
@@ -32,7 +32,7 @@ class VideoInfo extends StatelessWidget {
           ),
           const VerticalSpace(of: spacing2),
           Text(
-            videoPost.description,
+            akataBook.description,
             maxLines: 2,
             style: TextStyle(
               fontSize: fontSize12,
@@ -46,7 +46,7 @@ class VideoInfo extends StatelessWidget {
               // user
               Expanded(
                 child: Text(
-                  videoPost.postedBy,
+                  akataBook.author,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                   style: const TextStyle(
@@ -61,7 +61,7 @@ class VideoInfo extends StatelessWidget {
 
               // rating
               RatingBarIndicator(
-                rating: videoPost.rating,
+                rating: akataBook.rating,
                 itemBuilder: (context, index) => const Icon(
                   Icons.star,
                   color: akataboRatingsColor,

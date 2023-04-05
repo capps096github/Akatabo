@@ -1,0 +1,65 @@
+// sample books
+import '../model/book.dart';
+
+final List<AkataBook> akataboBooks = [
+  AkataBook(
+    title: 'The Alchemist',
+    bookUrl:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    author: 'Paulo Coelho',
+    coverImage:
+        'https://images.unsplash.com/photo-1680295820898-91223dc2705f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDN8Ym84alFLVGFFMFl8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60',
+    description:
+        'The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.',
+    coverDescription:
+        "The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.",
+    category: 'fiction',
+    price: 10.99,
+    rating: 4.5,
+  ),
+  AkataBook(
+    title: 'Integrated Science Book 4',
+    author: 'Paulo Coelho',
+    bookUrl:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    coverImage:
+        'https://images.unsplash.com/photo-1678915627649-c79691739372?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+    description:
+        'One of the bestselling science books for primary 4 compiled by two of the best teaching professionals in Uganda. This is the Fourth integrated primary science course book based on the integrated Primary science Syllabus prescribed by the National Curriculum Development Center.',
+    coverDescription:
+        "This is book four in the exciting series of Comprehensive Primary School Science Books. It is specifically written for use by Primary Four pupils as a course book. It is accompanied by a revision science work book four to guide the teachers, pupils and parents who help their children in their daily different learning tasks.",
+    category: 'fiction',
+    price: 11000.99,
+    rating: 4.5,
+  ),
+  AkataBook(
+    title: 'Comprehensive SST Book 7',
+    author: 'Paulo Coelho',
+    bookUrl:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    coverImage:
+        'https://images.unsplash.com/photo-1679340891423-a863f984fe6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+    description:
+        'One of the bestselling science books for primary 4 compiled by two of the best teaching professionals in Uganda. This is the Fourth integrated primary science course book based on the integrated Primary science Syllabus prescribed by the National Curriculum Development Center.',
+    coverDescription:
+        "This is book four in the exciting series of Comprehensive Primary School Science Books. It is specifically written for use by Primary Four pupils as a course book. It is accompanied by a revision science work book four to guide the teachers, pupils and parents who help their children in their daily different learning tasks.",
+    category: 'fiction',
+    price: 11000.99,
+    rating: 4.5,
+  ),
+  AkataBook(
+    title: 'Primary Maths Book 4',
+    author: 'Paulo Coelho',
+    bookUrl:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    coverImage:
+        'https://images.unsplash.com/photo-1678915627649-c79691739372?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+    description:
+        'One of the bestselling science books for primary 4 compiled by two of the best teaching professionals in Uganda. This is the Fourth integrated primary science course book based on the integrated Primary science Syllabus prescribed by the National Curriculum Development Center.',
+    coverDescription:
+        "This is book four in the exciting series of Comprehensive Primary School Science Books. It is specifically written for use by Primary Four pupils as a course book. It is accompanied by a revision science work book four to guide the teachers, pupils and parents who help their children in their daily different learning tasks.",
+    category: 'fiction',
+    price: 11000.99,
+    rating: 4.5,
+  ),
+];

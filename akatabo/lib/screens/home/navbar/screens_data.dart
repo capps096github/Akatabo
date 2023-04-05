@@ -20,11 +20,11 @@ List<NavbarScreen> navScreens = [
   NavbarScreen(
     name: 'Books',
     iconData: CupertinoIcons.doc_plaintext,
-    screenWidget: const AkataboPlaceholder(title: "Books"),
+    screenWidget: const AkataboBooks(),
   ),
   NavbarScreen(
     name: 'Shop',
     iconData: CupertinoIcons.bag,
-    screenWidget: const AkataboPlaceholder(title: "Shop"),
+    screenWidget: const AkataboShop(),
   ),
 ];
