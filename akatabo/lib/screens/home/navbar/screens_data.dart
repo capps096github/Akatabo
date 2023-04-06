@@ -1,7 +1,7 @@
 // Project imports:
 
-import 'package:akatabo/akatabo_exporter.dart';
-import 'package:akatabo/screens/home/home_page.dart';
+import '../../../akatabo_exporter.dart';
+import '../home_page.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'navbar_screen.dart';
@@ -9,7 +9,8 @@ import 'navbar_screen.dart';
 List<NavbarScreen> navScreens = [
   NavbarScreen(
     name: 'Home',
-    iconData: CupertinoIcons.home,
+    unselectedIcon: CupertinoIcons.house,
+    selectedIcon: CupertinoIcons.house_fill,
     screenWidget: const HomePage(),
   ),
   // NavbarScreen(
@@ -19,12 +20,16 @@ List<NavbarScreen> navScreens = [
   // ),
   NavbarScreen(
     name: 'Books',
-    iconData: CupertinoIcons.doc_plaintext,
+    unselectedIcon: CupertinoIcons.doc_plaintext,
+    selectedIcon: CupertinoIcons.doc_plaintext,
     screenWidget: const AkataboBooks(),
   ),
   NavbarScreen(
     name: 'Shop',
-    iconData: CupertinoIcons.bag,
-    screenWidget: const AkataboShop(),
+    unselectedIcon: CupertinoIcons.bag,
+    selectedIcon: CupertinoIcons.bag_fill,
+    // TODO add shop UI here
+    screenWidget: const AkataboCart(),
+    // screenWidget: const AkataboShop(),
   ),
 ];

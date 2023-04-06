@@ -1,4 +1,3 @@
-
 import '../../../akatabo_exporter.dart';
 
 class NavbarScreen {
@@ -6,7 +5,7 @@ class NavbarScreen {
   final String name;
 
   // icon data
-  final IconData? iconData;
+  final IconData unselectedIcon, selectedIcon;
 
   // widget
   final Widget screenWidget;
@@ -14,6 +13,7 @@ class NavbarScreen {
   NavbarScreen({
     required this.name,
     required this.screenWidget,
-     this.iconData,
+    required this.unselectedIcon,
+    required this.selectedIcon,
   });
 }

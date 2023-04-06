@@ -17,6 +17,7 @@ class AkataboTheme {
       //* -- Appbar
       appBarTheme: AppBarTheme(
         centerTitle: true,
+        elevation: 0,
         iconTheme: const IconThemeData(
           color: akataboSecondaryColor,
         ),

@@ -13,6 +13,7 @@ class SectionTitle extends StatelessWidget {
   // on tap
   final VoidCallback? onTap;
 
+
   @override
   Widget build(BuildContext context) {
     //
@@ -43,7 +44,8 @@ class SectionTitle extends StatelessWidget {
                   ),
                 ),
 
-                // arrow
+                // arrow show it if on tap is not null
+                if(onTap != null)
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: const [

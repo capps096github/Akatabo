@@ -36,3 +36,6 @@ const borderRadius2 = BorderRadius.all(circularRadius2);
 
 // border radius 0
 const borderRadius0 = BorderRadius.zero;
+
+// button border
+const buttonBorder = RoundedRectangleBorder(borderRadius: borderRadius6);

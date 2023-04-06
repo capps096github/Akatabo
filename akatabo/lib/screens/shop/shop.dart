@@ -1,6 +1,7 @@
 import '../../akatabo_exporter.dart';
 import '../books/components/book_card.dart';
 
+// TODO start here
 class AkataboShop extends StatelessWidget {
   const AkataboShop({super.key});
 

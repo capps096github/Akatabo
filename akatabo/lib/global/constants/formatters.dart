@@ -6,6 +6,5 @@ final ugxFormatter = NumberFormat.simpleCurrency(
 );
 
 ///Formats the date to a string
-final dateFormatter = DateFormat('EEE, dd MMMM yyyy - hh:mm a');
-
+final dateFormatter = DateFormat('EEEE, dd MMMM yyyy');
 // TODO: Add other app specific formatters here

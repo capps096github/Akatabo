@@ -1,7 +1,7 @@
 import '../../../akatabo_exporter.dart';
 
-class YourBooks extends StatelessWidget {
-  const YourBooks({super.key});
+class RecentlyViewedBooks extends StatelessWidget {
+  const RecentlyViewedBooks({super.key});
 
   @override
   Widget build(BuildContext context) {

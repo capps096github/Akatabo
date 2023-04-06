@@ -9,12 +9,11 @@ class ButtonBody extends ConsumerWidget {
     required this.textColor,
     required this.iconData,
     required this.onTap,
-    required this.isHovered,
     this.iconWidget,
     required this.isSmallButton,
   });
 
-  final bool isHovered, isSmallButton;
+  final bool isSmallButton;
 
   final Color buttonColor;
   final String? toolTip;
@@ -42,18 +41,12 @@ class ButtonBody extends ConsumerWidget {
     final hasIcon = (hasIconData || hasIconWidget);
 
     // elevation
-    final elevation = isHovered ? spacing8 : spacing0;
+    const elevation = spacing0;
 
     //
     return AnimatedContainer(
       width: isSmallButton ? null : (isDesktop ? width * .6 : width),
       duration: fiftyMilliseconds,
-      decoration: BoxDecoration(
-        color: isHovered ? buttonColor.withOpacity(.15) : akataboTransparent,
-        borderRadius: borderRadius8,
-      ),
-      padding: isHovered ? padding2 : (isDesktop ? padding2 : padding0),
-      clipBehavior: Clip.antiAlias,
       // for good looking UI o mobile we set this height to 42
       height: isDesktop ? kDesktopButtonHeight : kButtonHeight,
       child: Tooltip(
@@ -70,6 +63,7 @@ class ButtonBody extends ConsumerWidget {
                   backgroundColor: buttonColor,
                   foregroundColor: textColor,
                   elevation: elevation,
+                  shape: buttonBorder,
                   shadowColor: textColor.withOpacity(.15),
                   visualDensity: density,
                 ),
@@ -84,6 +78,7 @@ class ButtonBody extends ConsumerWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: buttonColor,
                   foregroundColor: textColor,
+                  shape: buttonBorder,
                   elevation: elevation,
                   visualDensity: density,
                   shadowColor: textColor.withOpacity(.15),

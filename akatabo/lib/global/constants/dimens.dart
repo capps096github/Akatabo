@@ -30,3 +30,6 @@ const double recentBooksWidth = 120.0;
 
 // recent books cover height
 const double recentBooksCoverHeight = 184.0;
+
+// tile height
+const double tileHeight = 90.0;

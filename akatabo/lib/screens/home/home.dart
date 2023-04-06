@@ -1,21 +1,21 @@
 import '../../akatabo_exporter.dart';
 import 'appbar/home_appbar.dart';
-import 'fab/home_fab.dart';
 import 'navbar/home_navbar.dart';
 import 'navbar/screens_data.dart';
 import 'providers/navbar_index_provider.dart';
 
-class AkataboHome extends StatelessWidget {
+class AkataboHome extends ConsumerWidget {
   const AkataboHome({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     //
     return Scaffold(
-      appBar: homeAppBar(context),
+      appBar: homeAppBar(context, ref),
       body: const HomeScreens(),
       bottomNavigationBar: const HomeNavbar(),
-      floatingActionButton: const HomeFAB(),
+      // TODO add FAB
+      // floatingActionButton: const HomeFAB(),
     );
   }
 }

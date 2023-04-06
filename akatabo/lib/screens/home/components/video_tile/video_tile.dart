@@ -36,8 +36,8 @@ class VideoTile extends StatelessWidget {
               ClipRRect(
                 borderRadius: borderRadius8,
                 child: SizedBox(
-                  width: 80,
-                  height: 80,
+                  width: tileHeight,
+                  height: tileHeight,
                   child: VideoThumbnail(videoPost: videoPost),
                 ),
               ),

@@ -1,4 +1,4 @@
-import 'package:akatabo/akatabo_exporter.dart';
+import '../../akatabo_exporter.dart';
 
 class AkataBook {
   // id
@@ -31,6 +31,26 @@ class AkataBook {
   // book url (for pdf)
   final String bookUrl;
 
+  // other details
+  // publisher number
+  final String publisherNo;
+
+  // publisher name
+  final String publisher;
+
+  // publication date
+  final DateTime publishedOn;
+
+  // language
+  final String bookLanguage;
+
+  // page lengthe
+  final int numOfPages;
+
+// book size
+// TODO create a size converter that takes in KBs and coverts them to MBs
+  final double bookSize;
+
   AkataBook({
     required this.bookUrl,
     required this.title,
@@ -41,5 +61,11 @@ class AkataBook {
     required this.category,
     required this.price,
     required this.rating,
+    required this.publisherNo,
+    required this.publisher,
+    required this.publishedOn,
+    required this.bookLanguage,
+    required this.numOfPages,
+    required this.bookSize,
   }) : bookId = const Uuid().v4();
 }

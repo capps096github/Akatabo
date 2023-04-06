@@ -53,7 +53,7 @@ class SelectedIcon extends StatelessWidget {
         children: [
           // icon
           Icon(
-            screen.iconData,
+            screen.selectedIcon,
             color: akataboColor,
             size: 24,
           ),
@@ -103,7 +103,7 @@ class UnselectedIcon extends ConsumerWidget {
           children: [
             // icon
             Icon(
-              screen.iconData,
+              screen.unselectedIcon,
               color: color,
               size: 20,
             ),

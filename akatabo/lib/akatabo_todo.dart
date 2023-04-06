@@ -6,6 +6,8 @@ class AkataboTODO {
   // TODO put search in its own screen like that of thumbs
   
 
+  // TODO go to categories page create it to show a list view of books
+
   // TODO book detail screen to either open it by id or it takes in the book object as a parmeter
   //  id is good for urls and then the book object is good for passing the book object from one screen to another
 }
