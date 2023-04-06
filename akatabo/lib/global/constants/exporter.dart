@@ -8,3 +8,4 @@ export 'platforms.dart';
 export 'spacing.dart';
 export 'strings.dart';
 export 'font_sizes.dart';
+export 'image_icon_paths.dart';

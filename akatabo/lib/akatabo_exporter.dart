@@ -31,6 +31,9 @@ export 'package:percent_indicator/percent_indicator.dart';
 // uuid
 export 'package:uuid/uuid.dart';
 
+// flextras
+export 'package:flextras/flextras.dart';
+
 //? app folders
 //* app
 export 'app/exporter.dart';

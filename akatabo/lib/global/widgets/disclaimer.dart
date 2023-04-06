@@ -5,8 +5,8 @@ import '../../akatabo_exporter.dart';
 class AkataboDisclaimer extends StatelessWidget {
   const AkataboDisclaimer({
     super.key,
-    this.continuingColor = akataboColor,
-    this.termsPrivacycolor = akataboSecondaryColor,
+    this.continuingColor = akataboWhite,
+    this.termsPrivacycolor = akataboWhite,
   });
 
   final Color continuingColor;
@@ -17,7 +17,7 @@ class AkataboDisclaimer extends StatelessWidget {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-        text: 'By continuing, you declare that you accept The Calcut\n',
+        text: 'By continuing, you declare that you accept The Akatabo ',
         style: TextStyle(color: continuingColor),
         children: <TextSpan>[
           TextSpan(
