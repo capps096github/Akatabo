@@ -23,13 +23,10 @@ class ToForgotPasswordButton extends ConsumerWidget {
             if (!currentFocus.hasPrimaryFocus) {
               currentFocus.unfocus();
             }
-            //  go to forgot password page index
-            // ref.read(authPageIndexProvider.notifier).state =
-            //     forgotPasswordPageIndex;
+            //  go to forgot password page index as per auth pages in auth_page.dart
+            ref.read(authPageIndexProvider.notifier).state = 2;
           },
-          customBorder: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
+          borderRadius: BorderRadius.circular(8),
           hoverColor: akataboColor.withOpacity(.05),
           splashColor: akataboColor.withOpacity(.1),
           child: const Padding(

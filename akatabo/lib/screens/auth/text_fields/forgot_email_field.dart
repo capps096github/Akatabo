@@ -10,7 +10,7 @@ final emailExp = RegExp(
     r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
 
 class ForgotEmailField extends ConsumerWidget {
-  const ForgotEmailField({Key? key}) : super(key: key);
+  const ForgotEmailField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -11,7 +11,7 @@ const double kHorizontalDividerWidth = 60.0;
 const double kButtonHeight = 42.0;
 
 // desktop button height
-const double kDesktopButtonHeight = 56.0;
+const double kDesktopButtonHeight = 48.0;
 
 // maxVideoHeight
 const double maxVideoHeight = 450.0;
@@ -33,3 +33,7 @@ const double recentBooksCoverHeight = 184.0;
 
 // tile height
 const double tileHeight = 90.0;
+
+
+// max width for the app auth screens
+const double maxAuthWidth = 500.0;

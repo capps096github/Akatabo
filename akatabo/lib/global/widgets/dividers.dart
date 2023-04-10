@@ -6,17 +6,17 @@ import '../../akatabo_exporter.dart';
 class ThickHorizontalDivider extends StatelessWidget {
   const ThickHorizontalDivider({
     super.key,
-    this.dividerColor = akataboColor,
+    this.color = akataboColor,
     this.thickness = kDividerThickness,
-    this.dividerWidth = kHorizontalDividerWidth,
+    this.width = kHorizontalDividerWidth,
     this.margin = const EdgeInsets.symmetric(vertical: 16.0),
   });
 
 //color of the divider
-  final Color dividerColor;
+  final Color color;
 
   // divider width
-  final double dividerWidth;
+  final double width;
 
   /// divider height
   final double thickness;
@@ -29,9 +29,9 @@ class ThickHorizontalDivider extends StatelessWidget {
     return Container(
       margin: margin,
       height: thickness,
-      width: dividerWidth,
+      width: width,
       decoration: BoxDecoration(
-        color: dividerColor,
+        color: color,
         borderRadius: BorderRadius.circular(thickness / 2),
       ),
     );
@@ -66,8 +66,8 @@ class SliverThickHorizontalDivider extends StatelessWidget {
       child: ThickHorizontalDivider(
         margin: margin,
         thickness: thickness,
-        dividerWidth: dividerWidth,
-        dividerColor: dividerColor,
+        width: dividerWidth,
+        color: dividerColor,
       ),
     );
   }

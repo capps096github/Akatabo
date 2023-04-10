@@ -44,6 +44,18 @@ class ButtonBody extends ConsumerWidget {
     const elevation = spacing0;
 
     //
+    var buttonStyle = ElevatedButton.styleFrom(
+      backgroundColor: buttonColor,
+      foregroundColor: textColor,
+      elevation: elevation,
+      shape: buttonBorder,
+      shadowColor: textColor.withOpacity(.2),
+      visualDensity: density,
+      textStyle: TextStyle(
+        fontSize: isDesktop ? 16 : 14,
+        fontWeight: FontWeight.w600,
+      ),
+    );
     return AnimatedContainer(
       width: isSmallButton ? null : (isDesktop ? width * .6 : width),
       duration: fiftyMilliseconds,
@@ -59,14 +71,7 @@ class ButtonBody extends ConsumerWidget {
         child: hasIcon
             ? ElevatedButton.icon(
                 onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: buttonColor,
-                  foregroundColor: textColor,
-                  elevation: elevation,
-                  shape: buttonBorder,
-                  shadowColor: textColor.withOpacity(.15),
-                  visualDensity: density,
-                ),
+                style: buttonStyle,
                 label: Text(
                   text,
                   maxLines: 1,
@@ -75,14 +80,7 @@ class ButtonBody extends ConsumerWidget {
               )
             : ElevatedButton(
                 onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: buttonColor,
-                  foregroundColor: textColor,
-                  shape: buttonBorder,
-                  elevation: elevation,
-                  visualDensity: density,
-                  shadowColor: textColor.withOpacity(.15),
-                ),
+                style: buttonStyle,
                 child: Text(
                   text,
                   maxLines: 1,

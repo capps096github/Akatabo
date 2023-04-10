@@ -12,9 +12,9 @@ final passwordRegex = RegExp(
 
 class PasswordField extends ConsumerStatefulWidget {
   const PasswordField({
-    Key? key,
+    super.key,
     this.isSignUpScreen = false,
-  }) : super(key: key);
+  });
 
 // check whether we are on Sign In Screen
   final bool isSignUpScreen;

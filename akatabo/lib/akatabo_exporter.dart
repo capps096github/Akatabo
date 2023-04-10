@@ -34,6 +34,10 @@ export 'package:uuid/uuid.dart';
 // flextras
 export 'package:flextras/flextras.dart';
 
+
+// svgs
+export 'package:flutter_svg/flutter_svg.dart';
+
 //? app folders
 //* app
 export 'app/exporter.dart';

@@ -1,21 +1,20 @@
 import '../../akatabo_exporter.dart';
 import 'auth_background.dart';
-import 'login/login.dart';
+import 'auth_body.dart';
+import 'auth_page.dart';
 
-class AkataboAuth extends StatelessWidget {
+class AkataboAuth extends ConsumerWidget {
   const AkataboAuth({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final authpage = ref.watch(authPageProvider);
     // switch index to change screens
     return Scaffold(
-      body: Stack(
-        children: const [
-          AuthBackground(
-            authChild: LoginScreen(),
-            imagePath: loginImage,
-          ),
-        ],
+      backgroundColor: akataboColor,
+      body: AuthBackground(
+        screen: AuthBody(child: authpage.page),
+        imagePath: authpage.imagePath,
       ),
     );
   }

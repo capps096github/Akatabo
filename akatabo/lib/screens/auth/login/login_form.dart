@@ -2,8 +2,10 @@
 import '../../../akatabo_exporter.dart';
 import '../auth_providers.dart';
 import '../components/auth_error_text.dart';
-import '../text_fields/email_field.dart';
-import '../text_fields/password_field.dart';
+import '../components/auth_option_text.dart';
+import '../components/or_text.dart';
+import '../text_fields/exporter.dart';
+import '../google/google_auth_button.dart';
 import 'login_button.dart';
 import 'to_forgot_password_btn.dart';
 
@@ -32,24 +34,23 @@ class LoginForm extends ConsumerWidget {
 
             ///Forgot Password Button
             ToForgotPasswordButton(),
-            VerticalSpace(of: spacing8),
 
             AuthErrorText(),
             LogInButton(),
 
             ///or
-            VerticalSpace(of: spacing32),
+            OrAuthText(),
 
             ///GOOGLE AUTH
-            // GoogleAuthButton(),
-            VerticalSpace(of: spacing24),
+            GoogleAuthButton(),
+            VerticalSpace(of: spacing32),
 
             ///bottom
-            // CreateAccountButton(),
+            AuthOptionText(),
             VerticalSpace(of: spacing24),
 
-            AkataboDisclaimer(),
-            VerticalSpace(of: spacing24),
+            // AkataboDisclaimer(),
+            // VerticalSpace(of: spacing24),
           ],
         ),
       ),

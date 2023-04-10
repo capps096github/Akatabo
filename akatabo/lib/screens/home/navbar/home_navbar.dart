@@ -13,7 +13,7 @@ class HomeNavbar extends StatelessWidget {
       color: akataboBackground,
       padding: const EdgeInsets.symmetric(horizontal: spacing16),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: List.generate(
           navScreens.length,
           (index) {

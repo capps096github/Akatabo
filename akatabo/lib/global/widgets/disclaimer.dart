@@ -18,7 +18,7 @@ class AkataboDisclaimer extends StatelessWidget {
       textAlign: TextAlign.center,
       text: TextSpan(
         text: 'By continuing, you declare that you accept The Akatabo ',
-        style: TextStyle(color: continuingColor),
+        style: TextStyle(color: continuingColor.withOpacity(.8)),
         children: <TextSpan>[
           TextSpan(
             text: 'Terms of Service',

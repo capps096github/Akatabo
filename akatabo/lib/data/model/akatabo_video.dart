@@ -35,5 +35,4 @@ class AkataboVideo {
 
   // postedBy, get this from the user id for now put by @userid, buh later on it will be changed
   String get postedBy => '@$userId';
-
 }

@@ -19,3 +19,6 @@ final forgotFormKeyProvider =
 // auth error text provider
 final authErrorTextProvider = StateProvider<String>((_) => '');
 
+
+///whether the email to rest password has been sent
+final isResetEmailSentProvider = StateProvider((ref) => false);

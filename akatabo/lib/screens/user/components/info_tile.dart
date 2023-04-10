@@ -88,9 +88,9 @@ class InfoTile extends StatelessWidget {
             ),
             // divider
             const ThickHorizontalDivider(
-              dividerColor: akataboRatingsColor,
+              color: akataboRatingsColor,
               thickness: 1.5,
-              dividerWidth: double.infinity,
+              width: double.infinity,
               margin: EdgeInsets.symmetric(
                 horizontal: spacing16,
                 vertical: spacing4,

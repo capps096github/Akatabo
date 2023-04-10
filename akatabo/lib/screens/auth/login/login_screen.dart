@@ -1,4 +1,5 @@
 import '../../../akatabo_exporter.dart';
+import '../components/auth_heading.dart';
 import 'login_form.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -7,17 +8,10 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ExpandedScrollingColumn(
+      key: PageStorageKey("login"),
       children: [
         Spacer(flex: 2),
-        Text(
-          "Login",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: fontSize32,
-            fontWeight: FontWeight.bold,
-            color: akataboWhite,
-          ),
-        ),
+        AuthHeader(heading: "Login"),
         Spacer(),
 
         // VerticalSpace(of: spacing16),

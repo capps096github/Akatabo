@@ -3,11 +3,11 @@ import '../../akatabo_exporter.dart';
 class AuthBackground extends StatelessWidget {
   const AuthBackground({
     super.key,
-    required this.authChild,
+    required this.screen,
     required this.imagePath,
   });
 
-  final Widget authChild;
+  final Widget screen;
 
   final String imagePath;
 
@@ -40,6 +40,7 @@ class AuthBackground extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     akataboTransparent,
+                    akataboColor.withOpacity(0.25),
                     akataboColor.withOpacity(0.5),
                     akataboColor.withOpacity(0.75),
                     akataboColor,
@@ -54,7 +55,14 @@ class AuthBackground extends StatelessWidget {
         // child
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: spacing16),
-          child: authChild,
+          child: SafeArea(
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: maxAuthWidth),
+                child: screen,
+              ),
+            ),
+          ),
         ),
       ],
     );
