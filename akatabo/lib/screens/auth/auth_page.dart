@@ -1,6 +1,7 @@
 import '../../akatabo_exporter.dart';
 import 'auth_providers.dart';
 import 'forgot/forgot_screen.dart';
+import 'level/educ_level.dart';
 import 'login/login_screen.dart';
 import 'sign_up/signup_screen.dart';
 
@@ -12,10 +13,10 @@ class AuthPage {
   final String imagePath;
 
   // question
-  final String question;
+  final String? question;
 
   // action
-  final String action;
+  final String? action;
 
   /// this is the index of the page to switch to inorder to perform the action e.g if action is login, the page index is the index of the signup page and vice versa
   final int actionPageIndex;
@@ -23,8 +24,8 @@ class AuthPage {
   AuthPage({
     required this.page,
     required this.imagePath,
-    required this.question,
-    required this.action,
+    this.question,
+    this.action,
     required this.actionPageIndex,
   });
 }
@@ -49,6 +50,11 @@ List<AuthPage> authPages = [
     imagePath: getImage,
     question: "Remember your password?",
     action: "Login",
+    actionPageIndex: 0,
+  ),
+  AuthPage(
+    page: const EducationLevel(),
+    imagePath: getImage,
     actionPageIndex: 0,
   ),
 ];

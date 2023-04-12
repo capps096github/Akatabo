@@ -29,13 +29,15 @@ class HomePage extends StatelessWidget {
           // categories
           const CategoriesGrid(),
 
-          const SliverVerticalSpace(of: spacing16),
+          const SliverVerticalSpace(of: spacing32),
 
           // title
           SectionTitle(title: "Videos for You", onTap: () {}),
 
           // videos
           const VideosList(),
+
+          const SliverVerticalSpace(of: spacing32),
         ],
       ),
     );

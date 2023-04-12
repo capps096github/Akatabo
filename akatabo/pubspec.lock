@@ -41,6 +41,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.7"
+  archive:
+    dependency: transitive
+    description:
+      name: archive
+      sha256: "0c8368c9b3f0abbc193b9d6133649a614204b528982bebc7026372d61677ce3a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.3.7"
   args:
     dependency: transitive
     description:
@@ -169,14 +177,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.2"
+  ci:
+    dependency: transitive
+    description:
+      name: ci
+      sha256: "145d095ce05cddac4d797a158bc4cf3b6016d1fe63d8c3d2fbd7212590adca13"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.0"
   cli_util:
     dependency: transitive
     description:
       name: cli_util
-      sha256: "66f86e916d285c1a93d3b79587d94bd71984a66aac4ff74e524cfa7877f1395c"
+      sha256: b8db3080e59b2503ca9e7922c3df2072cf13992354d5e944074ffa836fba43b7
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.5"
+    version: "0.4.0"
   clock:
     dependency: transitive
     description:
@@ -229,26 +245,26 @@ packages:
     dependency: "direct dev"
     description:
       name: custom_lint
-      sha256: "32648ef4f1dda618d98a22bc958fa79d479895891061e63338bec510b67e821a"
+      sha256: "80ccf10b30d4f1d0b40bd6d276a86d72266569c0a7542f1b839daf2fd05c16a5"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.2"
+    version: "0.3.3"
   custom_lint_builder:
     dependency: transitive
     description:
       name: custom_lint_builder
-      sha256: "5d472a901d07ab5ba0239262c340d29930aa2cfd0c73068aa4d1142a353ffee4"
+      sha256: "0f77cd4603fff002284c6131d85c9a40772bbd285d09d0556aafd520e67d1916"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.2"
+    version: "0.3.3"
   custom_lint_core:
     dependency: transitive
     description:
       name: custom_lint_core
-      sha256: cc20ce83432675abcc109b766aad2e420946eaeecc32ffd34bada389cdaa9a74
+      sha256: "83bf91d1e4ef2a893bd9a7cefaede25a4e93b47779f71a2fed33d9122e3f02c9"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.2"
+    version: "0.3.3"
   dart_style:
     dependency: transitive
     description:
@@ -318,6 +334,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.0"
+  flutter_launcher_icons:
+    dependency: "direct dev"
+    description:
+      name: flutter_launcher_icons
+      sha256: "8546a9b9510e1a260b8d55fb2d07096e8a8552c6a2c2bf529100344894b2b41a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.13.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -440,6 +464,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  image:
+    dependency: transitive
+    description:
+      name: image
+      sha256: "483a389d6ccb292b570c31b3a193779b1b0178e7eb571986d9a49904b6861227"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.15"
   intl:
     dependency: "direct main"
     description:
@@ -640,6 +672,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  pointycastle:
+    dependency: transitive
+    description:
+      name: pointycastle
+      sha256: c3120a968135aead39699267f4c74bc9a08e4e909e86bc1b0af5bfd78691123c
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.7.2"
   pool:
     dependency: transitive
     description:

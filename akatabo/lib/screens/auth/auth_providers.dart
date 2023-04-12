@@ -22,3 +22,17 @@ final authErrorTextProvider = StateProvider<String>((_) => '');
 
 ///whether the email to rest password has been sent
 final isResetEmailSentProvider = StateProvider((ref) => false);
+
+// 
+final List<String> educationLevels = [
+  "Primary",
+  "Secondary",
+  "Tertiary (University)",
+  "Post Graduate",
+  "PhD",
+  "Other",
+];
+
+
+// level of education provider
+final levelOfEducProvider = StateProvider((ref) => educationLevels.first);

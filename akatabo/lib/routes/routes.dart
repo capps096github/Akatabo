@@ -1,4 +1,5 @@
 import '../../akatabo_exporter.dart';
+import '../screens/auth/level/educ_level.dart';
 
 ///* this provides the default router delegate for the app
 

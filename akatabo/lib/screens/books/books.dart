@@ -24,13 +24,15 @@ class AkataboBooks extends StatelessWidget {
 
           const RecentBooksList(),
 
-          const SliverVerticalSpace(of: spacing16),
+          const SliverVerticalSpace(of: spacing32),
 
           // title
           SectionTitle(title: "Your Books", onTap: () {}),
 
           // your books
           const YourBooks(),
+
+          const SliverVerticalSpace(of: spacing32),
         ],
       ),
     );

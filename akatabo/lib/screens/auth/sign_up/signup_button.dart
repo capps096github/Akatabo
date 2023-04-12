@@ -1,6 +1,8 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
+import '../auth_page.dart';
 import '../auth_providers.dart';
+import '../functions/functions.dart';
 import '../text_fields/textfields_riverpod.dart';
 
 class SignUpButton extends ConsumerStatefulWidget {
@@ -55,14 +57,23 @@ class _SignUpButtonState extends ConsumerState<SignUpButton> {
 
                 //   if (mounted) {
                 //     //  update button state
-                //     setState(() {
-                //       isButtonTapped = !isButtonTapped;
-                //     });
+                // setState(() {
+                //   isButtonTapped = !isButtonTapped;
+                // });
 
                 //     // clear the form after sign in
                 //     signUpFormKey.currentState!.reset();
                 //   }
                 // });
+
+                // then go to the select level page index
+                // * simulated auth
+                await authSimulation().then(
+                  (_) => ref.read(authPageIndexProvider.notifier).state =
+                      authPages.indexOf(
+                    authPages.last,
+                  ),
+                );
               }
             }
           : () {

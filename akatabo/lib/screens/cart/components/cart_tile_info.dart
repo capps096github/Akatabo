@@ -15,7 +15,7 @@ class CartTileInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: SizedBox(
-        height: tileHeight + 15,
+        height: tileHeight + 30,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,

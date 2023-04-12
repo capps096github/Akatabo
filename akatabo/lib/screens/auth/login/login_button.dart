@@ -1,6 +1,7 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
 import '../auth_providers.dart';
+import '../functions/functions.dart';
 import '../text_fields/textfields_riverpod.dart';
 
 class LogInButton extends ConsumerStatefulWidget {
@@ -24,33 +25,36 @@ class _SignInButtonState extends ConsumerState<LogInButton> {
       isTapped: isButtonTapped,
       onTap: () async {
         // reset the error to an empty string
-        // ref.read(authErrorTextProvider.notifier).state = '';
+        ref.read(authErrorTextProvider.notifier).state = '';
 
-        // // Unfocus Keyboard
-        // FocusScopeNode currentFocus = FocusScope.of(context);
-        // if (!currentFocus.hasPrimaryFocus) {
-        //   currentFocus.unfocus();
-        // }
+        // Unfocus Keyboard
+        FocusScopeNode currentFocus = FocusScope.of(context);
+        if (!currentFocus.hasPrimaryFocus) {
+          currentFocus.unfocus();
+        }
 
-        // if (signInFormKey.currentState!.validate()) {
-        //   //  update button state
-        //   setState(() {
-        //     isButtonTapped = !isButtonTapped;
-        //   });
+        if (signInFormKey.currentState!.validate()) {
+          //     update button state
+          setState(() {
+            isButtonTapped = !isButtonTapped;
+          });
 
-        //   await signInToThumbsApp(email: email, password: password, ref: ref)
-        //       .then((_) {
-        //     // check if widget is mounted
-        //     if (mounted) {
-        //       //  update button state
-        //       setState(() {
-        //         isButtonTapped = !isButtonTapped;
-        //       });
-        //       // clear the form after sign in
-        //       signInFormKey.currentState!.reset();
-        //     }
-        //   });
-        // }
+          //   await signInToThumbsApp(email: email, password: password, ref: ref)
+          //       .then((_) {
+          //     // check if widget is mounted
+          //     if (mounted) {
+          //       //  update button state
+          //       setState(() {
+          //         isButtonTapped = !isButtonTapped;
+          //       });
+          //       // clear the form after sign in
+          //       signInFormKey.currentState!.reset();
+          //     }
+          //   });
+
+          // * simulated auth
+          await authSimulation().then((_) => context.go(homePath));
+        }
       },
       text: "LOG IN",
       icon: Icons.login,

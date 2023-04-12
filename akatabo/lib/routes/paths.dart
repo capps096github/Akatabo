@@ -1,8 +1,8 @@
 // * All paths are defined here for app navigation
 
 // initial path
+// const initialPath = homePath;
 const initialPath = authPath;
-// const initialPath = profilePath;
 
 // * ------------------------------
 // home path

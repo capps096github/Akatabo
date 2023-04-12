@@ -31,9 +31,9 @@ class ButtonBody extends ConsumerWidget {
     final width = MediaQuery.of(context).size.width;
 
     final akataboResponsive = ref.watch(akataboResponsiveProvider(context));
-    //  final akataboResponsive = AkataboResponsive(context: context);
 
     final isDesktop = akataboResponsive.isDesktopScreen;
+    final isMobile = akataboResponsive.isMobileScreen;
 
     /// True if It has an Icon
     final hasIconData = (iconData != null);
@@ -57,7 +57,7 @@ class ButtonBody extends ConsumerWidget {
       ),
     );
     return AnimatedContainer(
-      width: isSmallButton ? null : (isDesktop ? width * .6 : width),
+      width: isSmallButton ? null : (isMobile ? width : maxAuthWidth),
       duration: fiftyMilliseconds,
       // for good looking UI o mobile we set this height to 42
       height: isDesktop ? kDesktopButtonHeight : kButtonHeight,

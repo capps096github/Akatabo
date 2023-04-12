@@ -86,4 +86,67 @@ final List<AkataBook> akataboBooks = [
     numOfPages: 234,
     bookSize: 3.5,
   ),
+  AkataBook(
+    title: 'Gulu - Gulu Goes to School',
+    author: 'Paulo Coelho',
+    bookUrl:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    coverImage:
+        'https://images.unsplash.com/photo-1678915627649-c79691739372?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+    description:
+        'A story of a pet goat that follows her owner to school and sits with her in class.',
+    coverDescription:
+        "A story of a pet goat that follows her owner to school and sits with her in class.",
+    category: 'fiction',
+    price: 11000.99,
+    rating: 4.5,
+    publisherNo: "UGAK01234560095",
+    publisher: '1RP Publishers',
+    publishedOn: DateTime(2002, 3, 15),
+    bookLanguage: "English",
+    numOfPages: 234,
+    bookSize: 4.5,
+  ),
+  AkataBook(
+    title: 'Where is the baby?',
+    author: 'MKD Publishers',
+    bookUrl:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    coverImage:
+        'https://images.unsplash.com/photo-1678915627649-c79691739372?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+    description:
+        'A story of a baby who hides her self in a box and causes commotion to his sister and brother.',
+    coverDescription:
+        "A story of a baby who hides her self in a box and causes commotion to his sister and brother.",
+    category: 'fiction',
+    price: 11000.99,
+    rating: 4.5,
+    publisherNo: "UGAK01234560095",
+    publisher: 'MKD Publishers',
+    publishedOn: DateTime(2002, 3, 15),
+    bookLanguage: "English",
+    numOfPages: 234,
+    bookSize: 4.2,
+  ),
+  AkataBook(
+    title: 'Busy Hospital',
+    author: 'MKD Publishers',
+    bookUrl:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    coverImage:
+        'https://images.unsplash.com/photo-1678915627649-c79691739372?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+    description:
+        'An illustration of a busy hospital using wild animals as the main characters.',
+    coverDescription:
+        "An illustration of a busy hospital using wild animals as the main characters.",
+    category: 'fiction',
+    price: 11000.99,
+    rating: 4.5,
+    publisherNo: "UGAK01234560095",
+    publisher: 'MKD Publishers',
+    publishedOn: DateTime(2002, 3, 15),
+    bookLanguage: "English",
+    numOfPages: 234,
+    bookSize: 4.2,
+  ),
 ];

@@ -38,19 +38,18 @@ class AuthOptionText extends ConsumerWidget {
           hoverColor: akataboColor.withOpacity(.05),
           splashColor: akataboColor.withOpacity(.1),
           child: Padding(
-            padding:
-                const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                text:question?? authpage.question,
+                text: question ?? authpage.question,
                 style: GoogleFonts.nunitoSans(
                   fontSize: 16,
                   color: akataboWhite,
                 ),
                 children: <TextSpan>[
                   TextSpan(
-                    text: "  ${authpage.action.toUpperCase()}",
+                    text: "  ${authpage.action?.toUpperCase()}",
                     style: const TextStyle(
                       fontWeight: FontWeight.w900,
                       color: akataboRatingsColor,

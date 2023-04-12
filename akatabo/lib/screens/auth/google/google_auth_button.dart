@@ -1,10 +1,11 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
 import '../auth_providers.dart';
+import '../functions/functions.dart';
 
 class GoogleAuthButton extends ConsumerStatefulWidget {
   const GoogleAuthButton({
-    super. key,
+    super.key,
     this.text = "SIGN IN",
     this.textColor = akataboBlack,
     this.buttonColor = akataboWhite,
@@ -48,11 +49,13 @@ class _GoogleAuthButtonState extends ConsumerState<GoogleAuthButton> {
         //   // check if widget is mounted
         //   if (mounted) {
         //     //  update button state
-        //     setState(() {
-        //       isButtonTapped = !isButtonTapped;
-        //     });
+        // setState(() {
+        //   isButtonTapped = !isButtonTapped;
+        // });
         //   }
         // });
+
+        await authSimulation().then((_) => context.go(homePath));
       },
       iconWidget: SvgPicture.asset(
         "assets/images/google.svg",

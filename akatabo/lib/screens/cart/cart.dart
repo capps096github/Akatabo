@@ -32,6 +32,8 @@ class AkataboCart extends StatelessWidget {
 
           // your books
           const RecentlyViewedBooks(),
+
+          const SliverVerticalSpace(of: spacing32),
         ],
       ),
     );
