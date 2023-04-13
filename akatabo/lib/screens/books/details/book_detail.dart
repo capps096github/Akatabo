@@ -16,7 +16,7 @@ class BookDetail extends StatelessWidget {
         title: Text(akataBook.title),
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: spacing8),
+        padding:  horizontalPadding8,
         children: [
           BookHeader(akataBook: akataBook),
 

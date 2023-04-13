@@ -1,5 +1,4 @@
 import '../../akatabo_exporter.dart';
-import '../screens/auth/level/educ_level.dart';
 
 ///* this provides the default router delegate for the app
 
@@ -32,6 +31,19 @@ final akataboRouter = GoRouter(
     GoRoute(
       path: settingsPath,
       builder: (context, state) => const AkataboSettings(),
+    ),
+
+    // * books
+    GoRoute(
+      path: "$booksPath/:categoryId",
+      builder: (context, state) {
+        // get the books from the books list via the category id passed in the url as books/:id
+        // category id
+        final categoryId = state.params['categoryId']!;
+
+        //
+        return AkataboBooksList(categoryId: categoryId);
+      },
     ),
   ],
 

@@ -5,7 +5,7 @@ final searchTexts = [
   'Search by Name',
   'Search by Description',
   'Happy Searching!',
-  'Search for any Book',
+  'Search for any Book here',
 ];
 
 class SearchTexts extends StatelessWidget {

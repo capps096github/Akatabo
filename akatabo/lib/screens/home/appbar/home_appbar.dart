@@ -11,6 +11,10 @@ AppBar homeAppBar(BuildContext context, WidgetRef ref) {
   // title
   final title = isHomeScreen ? 'Akatabo' : navScreens[navBarIndex].name;
   //
+
+  // app user from akataboUser
+  final akataboUser = ref.watch(akataboUserProvider);
+
   return AppBar(
     title: Text(title),
     elevation: 0,
@@ -34,7 +38,7 @@ AppBar homeAppBar(BuildContext context, WidgetRef ref) {
           child: Hero(
             tag: userProfileTag,
             child: AppImage(
-              imageUrl: akataboDefaultUser.profilePic,
+              imageUrl: akataboUser.profilePic,
               borderRadius: borderRadius4,
               width: spacing40,
               height: spacing40,

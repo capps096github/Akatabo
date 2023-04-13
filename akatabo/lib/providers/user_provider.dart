@@ -6,5 +6,8 @@ part 'user_provider.g.dart';
 
 @riverpod
 AkataboUser akataboUser(AkataboUserRef ref) {
+  // get user from akataboDefaultUserProvider
+  final akataboDefaultUser = ref.watch(akataboDefaultUserProvider);
+
   return akataboDefaultUser;
 }

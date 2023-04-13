@@ -4,7 +4,6 @@ class BookCategory {
   // title
   final String title;
 
-  //TODO asssign id
   final String id;
 
   // image

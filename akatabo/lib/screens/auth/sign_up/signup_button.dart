@@ -3,7 +3,6 @@ import '../../../akatabo_exporter.dart';
 import '../auth_page.dart';
 import '../auth_providers.dart';
 import '../functions/functions.dart';
-import '../text_fields/textfields_riverpod.dart';
 
 class SignUpButton extends ConsumerStatefulWidget {
   const SignUpButton({super.key});

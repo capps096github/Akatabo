@@ -19,3 +19,7 @@ const profilePath = '/profile';
 // * ------------------------------
 // settings path
 const settingsPath = '/settings';
+
+// * ------------------------------
+// books path
+const booksPath = '/books';

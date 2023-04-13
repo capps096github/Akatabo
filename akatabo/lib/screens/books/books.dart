@@ -8,7 +8,7 @@ class AkataboBooks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: spacing8),
+      padding:  horizontalPadding8,
       child: CustomScrollView(
         slivers: [
           const SliverVerticalSpace(of: spacing16),
@@ -16,7 +16,7 @@ class AkataboBooks extends StatelessWidget {
           const SliverVerticalSpace(of: spacing16),
 
           // search
-          const SearchContainer(),
+          const SliverSearchContainer(),
           const SliverVerticalSpace(of: spacing16),
 
           // title

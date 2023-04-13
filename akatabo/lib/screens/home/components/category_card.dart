@@ -26,7 +26,6 @@ class CategoryCard extends ConsumerWidget {
 
     // color
     final color = Color(bookCategory.colorCode);
-    // final color = akataboRandomColor;
 
     return Card(
       margin: margin4,
@@ -34,7 +33,14 @@ class CategoryCard extends ConsumerWidget {
       clipBehavior: Clip.antiAlias,
       elevation: 4,
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          // go to list of books via id
+          // category id
+          final categoryId = bookCategory.id;
+
+          // go to list of books
+          context.push("$booksPath/$categoryId");
+        },
         child: Stack(
           children: [
             // title

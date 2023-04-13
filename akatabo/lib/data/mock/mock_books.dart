@@ -1,5 +1,6 @@
 // sample books
 import '../model/book.dart';
+import 'book_categories.dart';
 
 final List<AkataBook> akataboBooks = [
   AkataBook(
@@ -13,7 +14,7 @@ final List<AkataBook> akataboBooks = [
         'The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.',
     coverDescription:
         "The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.",
-    category: 'fiction',
+    categoryId: bookCategories[0].id,
     price: 10.99,
     rating: 2.5,
     publisherNo: "UGAK01234560095",
@@ -34,7 +35,7 @@ final List<AkataBook> akataboBooks = [
         'One of the bestselling science books for primary 4 compiled by two of the best teaching professionals in Uganda. This is the Fourth integrated primary science course book based on the integrated Primary science Syllabus prescribed by the National Curriculum Development Center.',
     coverDescription:
         "This is book four in the exciting series of Comprehensive Primary School Science Books. It is specifically written for use by Primary Four pupils as a course book. It is accompanied by a revision science work book four to guide the teachers, pupils and parents who help their children in their daily different learning tasks.",
-    category: 'fiction',
+    categoryId: bookCategories[0].id,
     price: 11000.99,
     rating: 3.5,
     publisherNo: "UGAK01234560095",
@@ -55,7 +56,7 @@ final List<AkataBook> akataboBooks = [
         'One of the bestselling science books for primary 4 compiled by two of the best teaching professionals in Uganda. This is the Fourth integrated primary science course book based on the integrated Primary science Syllabus prescribed by the National Curriculum Development Center.',
     coverDescription:
         "This is book four in the exciting series of Comprehensive Primary School Science Books. It is specifically written for use by Primary Four pupils as a course book. It is accompanied by a revision science work book four to guide the teachers, pupils and parents who help their children in their daily different learning tasks.",
-    category: 'fiction',
+    categoryId: bookCategories[2].id,
     price: 11000.99,
     rating: 4.5,
     publisherNo: "UGAK01234560095",
@@ -76,7 +77,7 @@ final List<AkataBook> akataboBooks = [
         'One of the bestselling science books for primary 4 compiled by two of the best teaching professionals in Uganda. This is the Fourth integrated primary science course book based on the integrated Primary science Syllabus prescribed by the National Curriculum Development Center.',
     coverDescription:
         "This is book four in the exciting series of Comprehensive Primary School Science Books. It is specifically written for use by Primary Four pupils as a course book. It is accompanied by a revision science work book four to guide the teachers, pupils and parents who help their children in their daily different learning tasks.",
-    category: 'fiction',
+    categoryId: bookCategories[3].id,
     price: 11000.99,
     rating: 4.5,
     publisherNo: "UGAK01234560095",
@@ -97,7 +98,7 @@ final List<AkataBook> akataboBooks = [
         'A story of a pet goat that follows her owner to school and sits with her in class.',
     coverDescription:
         "A story of a pet goat that follows her owner to school and sits with her in class.",
-    category: 'fiction',
+    categoryId: bookCategories[1].id,
     price: 11000.99,
     rating: 4.5,
     publisherNo: "UGAK01234560095",
@@ -118,7 +119,7 @@ final List<AkataBook> akataboBooks = [
         'A story of a baby who hides her self in a box and causes commotion to his sister and brother.',
     coverDescription:
         "A story of a baby who hides her self in a box and causes commotion to his sister and brother.",
-    category: 'fiction',
+    categoryId: bookCategories[1].id,
     price: 11000.99,
     rating: 4.5,
     publisherNo: "UGAK01234560095",
@@ -139,7 +140,7 @@ final List<AkataBook> akataboBooks = [
         'An illustration of a busy hospital using wild animals as the main characters.',
     coverDescription:
         "An illustration of a busy hospital using wild animals as the main characters.",
-    category: 'fiction',
+    categoryId: bookCategories[0].id,
     price: 11000.99,
     rating: 4.5,
     publisherNo: "UGAK01234560095",

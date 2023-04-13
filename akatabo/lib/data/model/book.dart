@@ -19,8 +19,8 @@ class AkataBook {
   // cover description
   final String coverDescription;
 
-  // category
-  final String category;
+  /// id of the category where this book belongs
+  final String categoryId;
 
   // price
   final double price;
@@ -58,7 +58,7 @@ class AkataBook {
     required this.coverImage,
     required this.description,
     required this.coverDescription,
-    required this.category,
+    required this.categoryId,
     required this.price,
     required this.rating,
     required this.publisherNo,

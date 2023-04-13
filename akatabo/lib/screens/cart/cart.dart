@@ -10,7 +10,7 @@ class AkataboCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: spacing8),
+      padding:  horizontalPadding8,
       child: CustomScrollView(
         slivers: [
           const SliverVerticalSpace(of: spacing16),
