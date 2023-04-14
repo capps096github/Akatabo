@@ -11,6 +11,9 @@ const akataboSecondaryColor = Color(0xFF200E32);
 // ratings color
 const akataboRatingsColor = Color(0xFFFFC107);
 
+// radio button color
+const akataboRadioButtonColor = Color(0xFFF03800);
+
 // akatabo background
 const akataboBackground = Color(0xFFF8F1FF);
 
@@ -19,6 +22,9 @@ const akataboRed = Color(0xFFE60000);
 
 // green
 const akataboGreen = Color(0xFF199400);
+
+// green
+const akataboVerifiedGreen = Color(0xFF25B800);
 
 // blue
 const akataboBlue = Color(0xFF2962FF);

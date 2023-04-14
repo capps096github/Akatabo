@@ -2,9 +2,16 @@ import '../../../../akatabo_exporter.dart';
 import 'book_info.dart';
 
 class BookTile extends StatelessWidget {
-  const BookTile({super.key, required this.akataBook});
+  const BookTile({
+    super.key,
+    required this.akataBook,
+    this.isMyBook = false,
+  });
 
   final AkataBook akataBook;
+
+  // is my book
+  final bool isMyBook;
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +19,11 @@ class BookTile extends StatelessWidget {
     const backgroundColor = akataboColor;
 
     return OpenRoute(
-      routePath: '/book/${akataBook.bookId}',
-      to: BookDetail(akataBook: akataBook),
+      routePath:
+          isMyBook ? '/read/${akataBook.bookId}' : '/book/${akataBook.bookId}',
+      to: isMyBook
+          ? ReadBook(book: akataBook)
+          : BookDetail(akataBook: akataBook),
       closedBuilder: (context, goToDetails) => Card(
         color: akataboWhite,
         surfaceTintColor: akataboWhite,

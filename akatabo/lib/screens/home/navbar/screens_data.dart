@@ -13,19 +13,14 @@ List<NavbarScreen> navScreens = [
     selectedIcon: CupertinoIcons.house_fill,
     screenWidget: const HomePage(),
   ),
-  // NavbarScreen(
-  //   name: 'Search',
-  //   iconData: Icons.search,
-  //   screenWidget: const AkataboPlaceholder(title: "Search"),
-  // ),
   NavbarScreen(
-    name: 'Books',
+    name: 'My Books',
     unselectedIcon: CupertinoIcons.doc_plaintext,
     selectedIcon: CupertinoIcons.doc_plaintext,
     screenWidget: const AkataboBooks(),
   ),
   NavbarScreen(
-    name: 'Shop',
+    name: 'My Shop',
     unselectedIcon: CupertinoIcons.bag,
     selectedIcon: CupertinoIcons.bag_fill,
     // TODO add shop UI here

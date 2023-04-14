@@ -1,5 +1,4 @@
 // Flutter imports:
-import 'package:flutter/cupertino.dart';
 
 // Project imports:
 import '../../../akatabo_exporter.dart';
@@ -14,6 +13,7 @@ class ForgotEmailField extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return CustomTextField(
+      restorationId: 'forgot_email_field',
       onChanged: (email) {
         if (emailExp.hasMatch(email)) {
           ref.read(forgotEmailProvider.notifier).state = email;
@@ -31,7 +31,7 @@ class ForgotEmailField extends ConsumerWidget {
         return null;
       },
       keyboardType: TextInputType.emailAddress,
-      prefixIcon: CupertinoIcons.mail_solid,
+      // prefixIcon: CupertinoIcons.mail_solid,
       textInputAction: TextInputAction.done,
       hintText: 'Email Address',
       autofillHints: const [AutofillHints.email, AutofillHints.username],

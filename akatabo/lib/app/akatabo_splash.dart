@@ -11,21 +11,16 @@ class AkataboSplash extends StatelessWidget {
       body: AuthBackground(
         screen: Column(
           mainAxisAlignment: MainAxisAlignment.end,
-          children: [
+          children: const [
             // space
-            const Spacer(flex: 4),
+            Spacer(flex: 4),
 
-            const VerticalSpace(of: spacing16),
+            VerticalSpace(of: spacing16),
 
             // logo
-            Image.asset(
-              smallIcon,
-              fit: BoxFit.fill,
-              width: 184,
-              height: 150,
-            ),
+            AkataboLogo(),
             //
-            const Text(
+            Text(
               "The school library in the palm of your hands",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -33,10 +28,10 @@ class AkataboSplash extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            const Spacer(),
+            Spacer(),
 
             // space
-            const VerticalSpace(of: spacing16),
+            VerticalSpace(of: spacing16),
           ],
         ),
         imagePath: splashImage,

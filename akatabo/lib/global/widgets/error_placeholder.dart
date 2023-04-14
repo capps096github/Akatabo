@@ -1,5 +1,4 @@
 // Project imports:
-import 'package:flutter/cupertino.dart';
 
 import '../../akatabo_exporter.dart';
 
@@ -20,50 +19,14 @@ class AkataboErrorPlaceHolder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: backgroundColor,
-      child: Padding(
-        padding: padding16,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // error header
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  CupertinoIcons.drop_triangle_fill,
-                  color: textColor,
-                  size: iconSize,
-                ),
-                const HorizontalSpace(of: spacing8),
-                Flexible(
-                  child: Text(
-                    errorTitle,
-                    style: TextStyle(
-                      color: textColor,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const VerticalSpace(of: spacing16),
+    final error = 'Error: $errorText';
 
-            //  error text
-            Center(
-              child: Text(
-                'Error: $errorText',
-                style: TextStyle(
-                  color: textColor,
-                  fontSize: 12,
-                ),
-              ),
-            ),
-          ],
-        ),
+    //
+    return Container(
+      color: backgroundColor.withOpacity(.8),
+      child: const Padding(
+        padding: padding8,
+        child: AkataboLogo(),
       ),
     );
   }

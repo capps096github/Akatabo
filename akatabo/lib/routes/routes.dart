@@ -45,6 +45,12 @@ final akataboRouter = GoRouter(
         return AkataboBooksList(categoryId: categoryId);
       },
     ),
+
+    // * checkout
+    GoRoute(
+      path: checkoutPath,
+      builder: (context, state) => const AkataboCheckout(),
+    ),
   ],
 
   redirect: (_, state) {

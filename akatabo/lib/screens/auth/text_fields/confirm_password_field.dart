@@ -19,6 +19,7 @@ class _ConfirmPasswordFieldState extends ConsumerState<ConfirmPasswordField> {
   Widget build(BuildContext context) {
     //
     return CustomTextField(
+      restorationId: 'confirm_password_field',
       onChanged: (confirmedPassword) {
         ref.read(confirmPasswordProvider.notifier).state = confirmedPassword;
       },
@@ -37,8 +38,8 @@ class _ConfirmPasswordFieldState extends ConsumerState<ConfirmPasswordField> {
         return null;
       },
       keyboardType: TextInputType.visiblePassword,
-      prefixIcon:
-          isObscured ? CupertinoIcons.lock_fill : CupertinoIcons.lock_open_fill,
+      // prefixIcon:
+      //     isObscured ? CupertinoIcons.lock_fill : CupertinoIcons.lock_open_fill,
       labelText: 'Confirm Password',
       hintText: 'Confirm Password',
       suffixIcon: IconButton(

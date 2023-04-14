@@ -4,10 +4,9 @@ import 'package:flutter/cupertino.dart';
 // Project imports:
 import '../../../akatabo_exporter.dart';
 import '../auth_providers.dart';
-import '../text_fields/textfields_riverpod.dart';
 
 class ForgotPasswordButton extends ConsumerStatefulWidget {
-  const ForgotPasswordButton({super. key}) ;
+  const ForgotPasswordButton({super.key});
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() =>

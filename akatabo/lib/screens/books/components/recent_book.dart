@@ -21,8 +21,8 @@ class _RecentBookState extends State<RecentBook> {
   Widget build(BuildContext context) {
     //
     return OpenRoute(
-      routePath: '/book/${widget.book.bookId}',
-      to: BookDetail(akataBook: widget.book),
+      routePath: '/read/${widget.book.bookId}',
+      to: ReadBook(book: widget.book),
       closedBuilder: (context, goToDetails) => AnimatedContainer(
         duration: quarterSeconds,
         margin: const EdgeInsets.only(right: spacing8),

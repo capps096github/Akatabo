@@ -1,8 +1,8 @@
 // * All paths are defined here for app navigation
 
 // initial path
-// const initialPath = homePath;
-const initialPath = authPath;
+const initialPath = homePath;
+// const initialPath = checkoutPath;
 
 // * ------------------------------
 // home path
@@ -23,3 +23,7 @@ const settingsPath = '/settings';
 // * ------------------------------
 // books path
 const booksPath = '/books';
+
+// * ------------------------------
+// checkout path
+const checkoutPath = '/checkout';

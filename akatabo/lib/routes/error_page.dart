@@ -13,7 +13,10 @@ class AkataboErrorScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: beautify this error screen
     return Scaffold(
-      appBar: AppBar(title: const Text("Page Not Found")),
+      appBar: AppBar(
+        title: const Text("Page Not Found"),
+        leading: const AkataboBackButton(path: homePath),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -11,6 +11,21 @@ const String signupImage = 'assets/images/signup_image.png';
 // get image
 const String getImage = 'assets/images/get_image.png';
 
+// google icon
+const String googleIcon = "assets/images/google.svg";
+
+// mastercard icon
+const String mastercardIcon = "assets/images/mastercard.svg";
+
+// visa icon
+const String visaIcon = "assets/images/visa.png";
+
+// mtn icon
+const String mtnIcon = "assets/images/mtn.svg";
+
+// airtel icon
+const String airtelIcon = "assets/images/airtel.svg";
+
 // icon path
 const String iconPath = 'assets/icons';
 

@@ -7,8 +7,11 @@ class CheckoutButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return SliverToBoxAdapter(
       child: AppButton(
-        text: "Checkout",
-        onTap: () {},
+        label: "Checkout",
+        onTap: () {
+          // push to checkout screen
+          context.push(checkoutPath);
+        },
       ),
     );
   }

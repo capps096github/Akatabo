@@ -1,3 +1,7 @@
+
+/// half a quarter of a second
+const halfQuarterSeconds = Duration(milliseconds: 125);
+
 ///1/4 a second
 const quarterSeconds = Duration(milliseconds: 250);
 

@@ -28,6 +28,7 @@ class _PasswordFieldState extends ConsumerState<PasswordField> {
   @override
   Widget build(BuildContext context) {
     return CustomTextField(
+      restorationId: 'password_field',
       onChanged: (password) {
         if (password.length > 6) {
           ref.read(passwordProvider.notifier).state = password;
@@ -48,8 +49,8 @@ class _PasswordFieldState extends ConsumerState<PasswordField> {
         return null;
       },
       keyboardType: TextInputType.visiblePassword,
-      prefixIcon:
-          isObscured ? CupertinoIcons.lock_fill : CupertinoIcons.lock_open_fill,
+      // prefixIcon:
+      //     isObscured ? CupertinoIcons.lock_fill : CupertinoIcons.lock_open_fill,
       labelText: 'Password',
       hintText: 'Password',
       suffixIcon: IconButton(
@@ -63,7 +64,9 @@ class _PasswordFieldState extends ConsumerState<PasswordField> {
           });
         },
       ),
-      autofillHints: const [AutofillHints.password],
+      autofillHints: [
+        if (widget.isSignUpScreen) AutofillHints.newPassword,
+      ],
       obscureText: isObscured,
       textInputAction: TextInputAction.done,
     );

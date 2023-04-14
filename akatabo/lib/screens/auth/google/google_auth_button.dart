@@ -58,7 +58,7 @@ class _GoogleAuthButtonState extends ConsumerState<GoogleAuthButton> {
         await authSimulation().then((_) => context.go(homePath));
       },
       iconWidget: SvgPicture.asset(
-        "assets/images/google.svg",
+        googleIcon,
         height: 20,
         width: 20,
       ),

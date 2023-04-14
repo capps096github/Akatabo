@@ -12,7 +12,10 @@ class YourBooks extends StatelessWidget {
           // book
           final book = akataboBooks[index];
 
-          return BookTile(akataBook: book);
+          return BookTile(
+            akataBook: book,
+            isMyBook: true,
+          );
         },
         childCount: akataboBooks.length,
       ),

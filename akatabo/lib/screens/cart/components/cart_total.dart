@@ -1,62 +1,65 @@
 import '../../../akatabo_exporter.dart';
 
 class CartTotal extends StatelessWidget {
-  const CartTotal({super.key});
+  const CartTotal({
+    super.key,
+    this.totalColor = akataboColor,
+  });
+
+  // total color
+  final Color totalColor;
 
   @override
   Widget build(BuildContext context) {
 //
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: spacing8,
-          vertical: spacing8,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            // heading
-            const Expanded(
-              child: Text(
-                "Subtotal",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: fontSize18,
-                  color: akataboColor,
-                ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: spacing8,
+        vertical: spacing8,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // heading
+          const Expanded(
+            child: Text(
+              "Total",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: fontSize18,
+                color: akataboColor,
               ),
             ),
+          ),
 
-            // arrow
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // see all
-                Text(
-                  ugxFormatter.format(100000),
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w900,
-                    fontSize: fontSize20,
-                    color: akataboColor,
-                  ),
+          // arrow
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // see all
+              Text(
+                ugxFormatter.format(100000),
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: fontSize20,
+                  color: totalColor,
                 ),
+              ),
 
-                const HorizontalSpace(of: spacing4),
+              const HorizontalSpace(of: spacing4),
 
-                // arrow
-                // see all
-                const Text(
-                  "/-",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: fontSize20,
-                    color: akataboColor,
-                  ),
+              // only
+              Text(
+                "/-",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: fontSize20,
+                  color: totalColor,
                 ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

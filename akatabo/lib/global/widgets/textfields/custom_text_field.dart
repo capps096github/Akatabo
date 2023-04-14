@@ -10,8 +10,9 @@ class CustomTextField extends StatelessWidget {
     required this.labelText,
     required this.keyboardType,
     required this.onChanged,
+    required this.restorationId,
     this.onFieldSubmitted,
-    required this.prefixIcon,
+    this.obscuringCharacter,
     this.obscureText = false,
     this.initialValue,
     this.fillColor = akataboWhite,
@@ -26,6 +27,8 @@ class CustomTextField extends StatelessWidget {
     this.maxLength,
     this.suffixIcon,
     this.inputFormatters,
+    this.prefixText,
+    this.borderColor,
   });
 
   final String? initialValue;
@@ -42,15 +45,26 @@ class CustomTextField extends StatelessWidget {
   // action to be shown on the soft keyboard
   final TextInputAction textInputAction;
   final Color fillColor, textColor, labelTextColor;
+
+  final Color? borderColor;
+
+  //
   final Widget? suffixIcon;
 
-  final IconData prefixIcon;
+  // final IconData? prefixIcon;
 
   // on field submitted
   final ValueChanged<String>? onFieldSubmitted, onChanged;
 
   //
   final List<TextInputFormatter>? inputFormatters;
+
+  // restoration id
+  final String restorationId;
+
+  final String? prefixText;
+
+  final String? obscuringCharacter;
 
   @override
   Widget build(BuildContext context) {
@@ -67,13 +81,14 @@ class CustomTextField extends StatelessWidget {
           style: TextStyle(
             fontSize: fontSize16,
             color: labelTextColor,
+            fontWeight: FontWeight.bold,
           ),
         ),
 
         const VerticalSpace(of: spacing4),
-
         // text field
         TextFormField(
+          restorationId: restorationId,
           controller: controller,
           autofillHints: autofillHints,
           inputFormatters: inputFormatters ??
@@ -88,6 +103,8 @@ class CustomTextField extends StatelessWidget {
           autofocus: false,
           minLines: numLines,
           maxLines: numLines,
+          maxLength: maxLength,
+          maxLengthEnforcement: MaxLengthEnforcement.enforced,
           obscureText: obscureText,
 
           // decoration
@@ -121,15 +138,15 @@ class CustomTextField extends StatelessWidget {
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.0),
               borderSide: BorderSide(
-                color: fillColor,
+                color: borderColor ?? fillColor,
                 width: 1,
                 style: BorderStyle.solid,
               ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.0),
-              borderSide: BorderSide(
-                color: fillColor,
+              borderSide: const BorderSide(
+                color: akataboVerifiedGreen,
                 width: 2,
                 style: BorderStyle.solid,
               ),
@@ -137,13 +154,17 @@ class CustomTextField extends StatelessWidget {
             isDense: true,
 
             //* Icons
-            prefixIcon: Icon(
-              prefixIcon,
-              color: textColor,
-            ),
+            // prefixIcon: Icon(
+            //   prefixIcon,
+            //   color: textColor,
+            // ),
             suffixIcon: suffixIcon,
+
+            //* prefix
+            prefixText: prefixText,
+            prefixStyle: fieldTextStyle,
           ),
-          obscuringCharacter: '◉',
+          obscuringCharacter: obscuringCharacter ?? '◉',
           autovalidateMode: AutovalidateMode.onUserInteraction,
 
           // * cursor

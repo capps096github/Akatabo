@@ -4,7 +4,7 @@ import 'button_body.dart';
 class AppButton extends StatelessWidget {
   const AppButton({
     super.key,
-    required this.text,
+    required this.label,
     required this.onTap,
     this.textColor = akataboWhite,
     this.buttonColor = akataboColor,
@@ -16,7 +16,7 @@ class AppButton extends StatelessWidget {
 
   const AppButton.small({
     super.key,
-    required this.text,
+    required this.label,
     required this.onTap,
     this.textColor = akataboWhite,
     this.buttonColor = akataboColor,
@@ -28,7 +28,7 @@ class AppButton extends StatelessWidget {
 
   ///Wether the button is small or not
   final bool isSmallButton;
-  final String text;
+  final String label;
   final Widget? iconWidget;
   final VoidCallback onTap;
   final Color textColor, buttonColor;
@@ -40,7 +40,7 @@ class AppButton extends StatelessWidget {
     return ButtonBody(
       buttonColor: buttonColor,
       toolTip: toolTip,
-      text: text,
+      text: label,
       textColor: textColor,
       iconData: icon,
       iconWidget: iconWidget,

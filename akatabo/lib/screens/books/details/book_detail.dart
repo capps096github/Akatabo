@@ -13,10 +13,11 @@ class BookDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const AkataboBackButton(),
         title: Text(akataBook.title),
       ),
       body: ListView(
-        padding:  horizontalPadding8,
+        padding: horizontalPadding8,
         children: [
           BookHeader(akataBook: akataBook),
 

@@ -5,3 +5,4 @@ export 'settings/exporter.dart';
 export 'books/exporter.dart';
 export 'search/exporter.dart';
 export 'cart/exporter.dart';
+export 'checkout/exporter.dart';

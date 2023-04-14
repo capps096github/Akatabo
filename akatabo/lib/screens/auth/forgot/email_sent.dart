@@ -47,7 +47,7 @@ class EmailSent extends ConsumerWidget {
         ),
         const VerticalSpace(of: 20),
         AppButton(
-          text: "TRY AGAIN",
+          label: "TRY AGAIN",
           icon: CupertinoIcons.arrow_2_squarepath,
           onTap: () {
             // Is Email Sent

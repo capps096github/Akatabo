@@ -13,7 +13,7 @@ class BuyNowButton extends StatelessWidget {
     return Container(
       padding: padding4,
       child: AppButton(
-        text: "Buy Now",
+        label: "Buy Now",
         onTap: () {},
       ),
     );

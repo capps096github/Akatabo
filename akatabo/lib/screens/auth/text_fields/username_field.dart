@@ -1,5 +1,4 @@
 // Flutter imports:
-import 'package:flutter/cupertino.dart';
 
 // Project imports:
 import '../../../akatabo_exporter.dart';
@@ -13,6 +12,7 @@ class UsernameField extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     //
     return CustomTextField(
+      restorationId: 'username_field',
       onChanged: (username) {
         if (usernameExp.hasMatch(username)) {
           ref.read(userNameProvider.notifier).state = username;
@@ -29,7 +29,7 @@ class UsernameField extends ConsumerWidget {
         return null;
       },
       keyboardType: TextInputType.name,
-      prefixIcon: CupertinoIcons.person,
+      // prefixIcon: CupertinoIcons.person,
       hintText: 'Username',
       autofillHints: const [AutofillHints.name, AutofillHints.username],
       labelText: 'Username',

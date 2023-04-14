@@ -36,7 +36,7 @@ class CircularProgressAppButton extends StatelessWidget {
               child: CircularProgressIndicator(color: textColor),
             )
           : AppButton(
-              text: text,
+              label: text,
               onTap: onTap,
               toolTip: toolTip,
               icon: icon,

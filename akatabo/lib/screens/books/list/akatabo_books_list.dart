@@ -24,7 +24,7 @@ class AkataboBooksList extends ConsumerWidget {
           SliverAppBar(
             pinned: true,
             title: Text(bookCategory.title),
-            leading: BackButton(onPressed: () => context.go(homePath)),
+            leading: const AkataboBackButton(path: homePath),
           ),
 
           // search bar
@@ -36,7 +36,7 @@ class AkataboBooksList extends ConsumerWidget {
 
           // list of books
           SliverPadding(
-            padding:  horizontalPadding8,
+            padding: horizontalPadding8,
             sliver: SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {

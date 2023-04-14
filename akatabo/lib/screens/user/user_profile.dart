@@ -12,12 +12,9 @@ class UserProfile extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         // go to home
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: akataboWhite,
-          ),
-          onPressed: () => context.go(homePath),
+        leading: const AkataboBackButton(
+          path: homePath,
+          iconColor: akataboWhite,
         ),
         title: const Text(
           'Profile',

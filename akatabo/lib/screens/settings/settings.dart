@@ -7,13 +7,10 @@ class AkataboSettings extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
-        // go to home
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: akataboWhite,
-          ),
-          onPressed: () => context.go(profilePath),
+        // go to profile
+        leading: const AkataboBackButton(
+          path: profilePath,
+          iconColor: akataboWhite,
         ),
         title: const Text(
           'Settings',
