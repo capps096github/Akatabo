@@ -37,7 +37,7 @@ class VoucherField extends ConsumerWidget {
         return null;
       },
       suffixIcon: Padding(
-        padding: padding2,
+        padding: padding4,
         child: AppButton.small(
           label: "Apply",
           onTap: () {},

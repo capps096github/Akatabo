@@ -1,8 +1,7 @@
 import '../../akatabo_exporter.dart';
 import 'checkout_navbar.dart';
-import 'pages/payment_summary.dart';
-import 'pages/select_payment_mode.dart';
-import 'providers.dart';
+import 'checkout_pages_switcher.dart';
+import 'components/heading_indicator.dart';
 
 class AkataboCheckout extends StatelessWidget {
   const AkataboCheckout({super.key});
@@ -16,41 +15,30 @@ class AkataboCheckout extends StatelessWidget {
         title: const Text('Checkout'),
       ),
       // TODO code leading step navigator here
-      body: const Padding(
-        padding: padding8,
-        child: CheckoutPages(),
-      ),
+      body: const CheckoutBody(),
       bottomNavigationBar: const CheckoutNavbar(),
     );
   }
 }
 
-class CheckoutPages extends ConsumerWidget {
-  const CheckoutPages({super.key});
+class CheckoutBody extends StatelessWidget {
+  const CheckoutBody({
+    super.key,
+  });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final checkoutPageIndex = ref.watch(checkoutPageIndexProvider);
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: padding8,
+      child: Column(
+        children: const [
+          // header
+          HeadingIndicator(),
 
-    // checkout pages
-    const navScreens = [
-      SelectPaymentMethod(),
-      // MakePayment(),
-      PaymentSummary(),
-    ];
-
-    //
-    return PageTransitionSwitcher(
-      transitionBuilder: (child, animation, secondaryAnimation) {
-        return FadeThroughTransition(
-          animation: animation,
-          secondaryAnimation: secondaryAnimation,
-          fillColor: akataboTransparent,
-          child: child,
-        );
-      },
-      duration: halfSeconds,
-      child: navScreens[checkoutPageIndex],
+          //  checkout pages
+          Expanded(child: CheckoutPageSwitcher()),
+        ],
+      ),
     );
   }
 }

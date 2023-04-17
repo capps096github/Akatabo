@@ -3,13 +3,15 @@ import '../components/methods_list.dart';
 import '../components/payment_method_card.dart';
 import '../voucher/voucher_pay.dart';
 
-class SelectPaymentMethod extends StatelessWidget {
+class SelectPaymentMethod extends ConsumerWidget {
   const SelectPaymentMethod({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final paymentMethods = ref.watch(paymentMethodsProvider);
+
     //
     return ListView(
       children: [

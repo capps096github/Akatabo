@@ -33,4 +33,8 @@ const verticalPadding4 = EdgeInsets.symmetric(vertical: spacing4);
 const verticalPadding8 = EdgeInsets.symmetric(vertical: spacing8);
 
 // * Horizontal Paddings
+// 4
+const horizontalPadding4 = EdgeInsets.symmetric(horizontal: spacing4);
+
+//
 const horizontalPadding8 = EdgeInsets.symmetric(horizontal: spacing8);

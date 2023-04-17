@@ -64,33 +64,40 @@ class PaymentMethodCard extends ConsumerWidget {
                 activeColor: akataboRadioButtonColor,
               ),
               const HorizontalSpace(of: spacing8),
-              //
+
+              // * Form for the various payment methods
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    // title
-                    Text(
-                      paymentMethod.label,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 18,
-                        color: textBorderColor,
-                      ),
-                    ),
+                child: AutofillGroup(
+                  key: ValueKey(paymentMethod.autoFillKey),
+                  child: Form(
+                    key: paymentMethod.formKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        // title
+                        Text(
+                          paymentMethod.label,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 18,
+                            color: textBorderColor,
+                          ),
+                        ),
 
-                    Text(
-                      paymentMethod.description,
-                      style: TextStyle(
-                        color: textBorderColor,
-                      ),
-                    ),
-                    if (isSelected) const VerticalSpace(of: spacing16),
+                        Text(
+                          paymentMethod.description,
+                          style: TextStyle(
+                            color: textBorderColor,
+                          ),
+                        ),
+                        if (isSelected) const VerticalSpace(of: spacing16),
 
-                    // body as list of widgets if it is selected
-                    if (isSelected) ...paymentMethod.contents,
-                  ],
+                        // body as list of widgets if it is selected
+                        if (isSelected) ...paymentMethod.contents,
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ],

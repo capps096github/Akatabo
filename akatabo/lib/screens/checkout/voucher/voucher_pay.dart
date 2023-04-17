@@ -1,18 +1,28 @@
 import '../../../akatabo_exporter.dart';
+import '../providers.dart';
 import 'voucher_field.dart';
 
-class VoucherPay extends StatelessWidget {
+class VoucherPay extends ConsumerWidget {
   const VoucherPay({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    // voucher pay
+    final voucherPayKey = ref.watch(voucherPayFormKeyProvider);
+
     //
-    return Column(
-      children: const [
-        VerticalSpace(of: spacing16),
-        VoucherField(),
-        VerticalSpace(of: spacing8),
-      ],
+    return AutofillGroup(
+      key: const ValueKey("voucher"),
+      child: Form(
+        key: voucherPayKey,
+        child: Column(
+          children: const [
+            VerticalSpace(of: spacing16),
+            VoucherField(),
+            VerticalSpace(of: spacing8),
+          ],
+        ),
+      ),
     );
   }
 }

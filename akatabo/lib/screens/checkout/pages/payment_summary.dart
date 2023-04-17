@@ -6,11 +6,12 @@ class PaymentSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: const [
         // title
         Text(
           "PAYMENT SUMMARY",
+          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w600,
