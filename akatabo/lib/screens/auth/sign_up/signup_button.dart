@@ -28,6 +28,7 @@ class _SignUpButtonState extends ConsumerState<SignUpButton> {
 
     return CircularProgressAppButton(
       isTapped: isButtonTapped,
+      isGradientButton: true,
       text: "SIGN UP",
       onTap: isPasswordConfirmed
           ? () async {

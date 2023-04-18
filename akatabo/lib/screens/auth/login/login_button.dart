@@ -22,6 +22,7 @@ class _SignInButtonState extends ConsumerState<LogInButton> {
 
     return CircularProgressAppButton(
       isTapped: isButtonTapped,
+      isGradientButton: true,
       onTap: () async {
         // reset the error to an empty string
         ref.read(authErrorTextProvider.notifier).state = '';

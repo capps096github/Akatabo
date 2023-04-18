@@ -12,12 +12,10 @@ class MakePayment extends ConsumerWidget {
 
     final paymentMethods = ref.watch(paymentMethodsProvider);
 
+    final paymentMethodIndex = ref.watch(paymentMethodIndexProvider);
 
-                    final paymentMethodIndex =
-                        ref.watch(paymentMethodIndexProvider);
-
-                    // payment method
-                    final paymentMethod = paymentMethods[paymentMethodIndex];
+    // payment method
+    final paymentMethod = paymentMethods[paymentMethodIndex];
 
     return AnimatedSwitcher(
       duration: quarterSeconds,
@@ -76,15 +74,15 @@ class MakePayment extends ConsumerWidget {
                 ),
                 //
 
-                    //
-                    return Text(
-                      paymentMethod.label,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: fontSize18,
-                        color: akataboColor,
-                      ),
-                    ),
+                //
+                Text(
+                  paymentMethod.label,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: fontSize18,
+                    color: akataboColor,
+                  ),
+                ),
               ],
             ),
     );

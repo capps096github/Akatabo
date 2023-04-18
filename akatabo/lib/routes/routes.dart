@@ -1,4 +1,5 @@
 import '../../akatabo_exporter.dart';
+import '../screens/auth/level/educ_level.dart';
 
 ///* this provides the default router delegate for the app
 
@@ -18,7 +19,9 @@ final akataboRouter = GoRouter(
     //* auth
     GoRoute(
       path: authPath,
+      // builder: (context, state) => const AkataboSplash(),
       builder: (context, state) => const AkataboAuth(),
+      // builder: (context, state) => const EducationLevel(),
     ),
 
     //* profile

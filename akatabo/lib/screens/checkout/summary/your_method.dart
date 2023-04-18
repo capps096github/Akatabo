@@ -10,6 +10,7 @@ class YourMethod extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final paymentMethodIndex = ref.watch(paymentMethodIndexProvider);
+    final paymentMethods = ref.watch(paymentMethodsProvider);
 
     // payment method
     final paymentMethod = paymentMethods[paymentMethodIndex];

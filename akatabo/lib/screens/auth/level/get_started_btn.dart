@@ -20,6 +20,7 @@ class _GetStartedButtonState extends ConsumerState<GetStartedButton> {
     //
     return CircularProgressAppButton(
       isTapped: isButtonTapped,
+      isGradientButton: true,
       text: "Get Started",
       icon: Icons.chevron_right,
       onTap: () async {

@@ -1,4 +1,4 @@
-import 'package:uuid/uuid.dart';
+import '../../akatabo_exporter.dart';
 
 class BookCategory {
   // title
@@ -15,10 +15,14 @@ class BookCategory {
   // colors int
   final int colorCode;
 
+  // gradient colors
+  final List<Color> gradientColors;
+
   BookCategory({
     required this.title,
     required this.image,
     required this.colorCode,
     required this.bookIds,
+    required this.gradientColors,
   }) : id = const Uuid().v4();
 }

@@ -11,6 +11,7 @@ class CircularProgressAppButton extends StatelessWidget {
     this.icon,
     this.toolTip,
     this.iconWidget,
+    this.isGradientButton = false,
   });
   final bool isTapped;
   final VoidCallback onTap;
@@ -21,6 +22,9 @@ class CircularProgressAppButton extends StatelessWidget {
 
   // this will be rendered incase the icon is not provided
   final Widget? iconWidget;
+
+  // is gradient button
+  final bool isGradientButton;
 
   @override
   Widget build(BuildContext context) {
@@ -35,15 +39,22 @@ class CircularProgressAppButton extends StatelessWidget {
               ),
               child: CircularProgressIndicator(color: textColor),
             )
-          : AppButton(
-              label: text,
-              onTap: onTap,
-              toolTip: toolTip,
-              icon: icon,
-              textColor: textColor,
-              buttonColor: buttonColor,
-              iconWidget: iconWidget,
-            ),
+          : isGradientButton
+              ? GradientButton(
+                  label: text,
+                  onTap: onTap,
+                  toolTip: toolTip,
+                  textColor: textColor,
+                )
+              : AppButton(
+                  label: text,
+                  onTap: onTap,
+                  toolTip: toolTip,
+                  icon: icon,
+                  textColor: textColor,
+                  buttonColor: buttonColor,
+                  iconWidget: iconWidget,
+                ),
     );
   }
 }

@@ -3,11 +3,11 @@ import '../../akatabo_exporter.dart';
 // slected payment mode index
 final paymentMethodIndexProvider = StateProvider<int>((_) => 0);
 
-// TODO
+// TODO set this up
 // selected payment method
-final selectedPaymentMethodProvider = Provider<>((ref) {
-  return ;
-});
+// final selectedPaymentMethodProvider = Provider<>((ref) {
+//   return ;
+// });
 
 
 

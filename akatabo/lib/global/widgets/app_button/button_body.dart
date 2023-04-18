@@ -11,6 +11,7 @@ class ButtonBody extends ConsumerWidget {
     required this.onTap,
     this.iconWidget,
     required this.isSmallButton,
+    required this.isGradientButton,
   });
 
   final bool isSmallButton;
@@ -23,6 +24,9 @@ class ButtonBody extends ConsumerWidget {
   final VoidCallback onTap;
 
   final Widget? iconWidget;
+
+  // is gradient
+  final bool isGradientButton;
 
   @override
   Widget build(BuildContext context, ref) {
@@ -56,6 +60,8 @@ class ButtonBody extends ConsumerWidget {
         fontWeight: FontWeight.w600,
       ),
     );
+
+    //
     return AnimatedContainer(
       width: isSmallButton ? null : (isMobile ? width : maxAuthWidth),
       duration: fiftyMilliseconds,
@@ -68,24 +74,32 @@ class ButtonBody extends ConsumerWidget {
           color: textColor,
           borderRadius: borderRadius4,
         ),
-        child: hasIcon
-            ? ElevatedButton.icon(
-                onPressed: onTap,
-                style: buttonStyle,
-                label: Text(
-                  text,
-                  maxLines: 1,
-                ),
-                icon: iconWidget ?? Icon(iconData, color: textColor),
+        child: isGradientButton
+            ? AppTextButton(
+                onTap: onTap,
+                textColor: textColor,
+                buttonColor: buttonColor,
+                text: text,
+                toolTip: toolTip,
               )
-            : ElevatedButton(
-                onPressed: onTap,
-                style: buttonStyle,
-                child: Text(
-                  text,
-                  maxLines: 1,
-                ),
-              ),
+            : hasIcon
+                ? ElevatedButton.icon(
+                    onPressed: onTap,
+                    style: buttonStyle,
+                    label: Text(
+                      text,
+                      maxLines: 1,
+                    ),
+                    icon: iconWidget ?? Icon(iconData, color: textColor),
+                  )
+                : ElevatedButton(
+                    onPressed: onTap,
+                    style: buttonStyle,
+                    child: Text(
+                      text,
+                      maxLines: 1,
+                    ),
+                  ),
       ),
     );
   }

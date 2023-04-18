@@ -27,12 +27,20 @@ class CategoryCard extends ConsumerWidget {
     // color
     final color = Color(bookCategory.colorCode);
 
-    return Card(
+    return Container(
       margin: margin4,
-      color: color,
       clipBehavior: Clip.antiAlias,
-      elevation: 4,
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: borderRadius8,
+        gradient: LinearGradient(
+          colors: bookCategory.gradientColors,
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
       child: InkWell(
+        borderRadius: borderRadius8,
         onTap: () {
           // go to list of books via id
           // category id
@@ -61,15 +69,12 @@ class CategoryCard extends ConsumerWidget {
             Positioned(
               bottom: -20,
               right: -20,
-              child: Transform.rotate(
-                angle: 40,
-                child: AppImage(
-                  imageUrl: image,
-                  fit: BoxFit.fill,
-                  borderRadius: borderRadius4,
-                  height: imageSize,
-                  width: imageSize,
-                ),
+              child: AppImage(
+                imageUrl: image,
+                fit: BoxFit.fill,
+                borderRadius: borderRadius4,
+                // height: imageSize,
+                width: imageSize,
               ),
             ),
           ],
