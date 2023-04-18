@@ -10,10 +10,10 @@ class AkataboSplash extends StatelessWidget {
       backgroundColor: akataboColor,
       body: AuthBackground(
         screen: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             // space
-            Spacer(flex: 4),
+            Spacer(flex: 3),
 
             VerticalSpace(of: spacing16),
 

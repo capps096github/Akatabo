@@ -1,5 +1,4 @@
 import '../../../akatabo_exporter.dart';
-import '../auth_providers.dart';
 import '../functions/functions.dart';
 
 class GetStartedButton extends ConsumerStatefulWidget {
@@ -14,9 +13,6 @@ class _GetStartedButtonState extends ConsumerState<GetStartedButton> {
 
   @override
   Widget build(BuildContext context) {
-    // level of education from provider
-    final levelOfEduc = ref.watch(levelOfEducProvider);
-
     //
     return CircularProgressAppButton(
       isTapped: isButtonTapped,
@@ -32,7 +28,13 @@ class _GetStartedButtonState extends ConsumerState<GetStartedButton> {
 
         // go to home page
         // * simulated auth
-        await authSimulation().then((_) => context.go(homePath));
+        await authSimulation().then((_) {
+          // reset the auth index provider
+          ref.read(authPageIndexProvider.notifier).state = 0;
+
+          // go to home
+          context.go(homePath);
+        });
       },
     );
   }

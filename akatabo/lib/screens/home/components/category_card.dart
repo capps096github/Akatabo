@@ -16,7 +16,7 @@ class CategoryCard extends ConsumerWidget {
     final isMobile = akataboResponsive.isMobileScreen;
 
     // image size 100 on mobile and 125 on others
-    final double imageSize = isMobile ? 90 : 125;
+    final double imageSize = isMobile ? 100 : 125;
 
     // title
     final title = bookCategory.title;
@@ -67,8 +67,8 @@ class CategoryCard extends ConsumerWidget {
 
             // image at the bottom left conner but tilted to an angle of 45 degrees
             Positioned(
-              bottom: -20,
-              right: -20,
+              bottom: 0,
+              right: 0,
               child: AppImage(
                 imageUrl: image,
                 fit: BoxFit.fill,

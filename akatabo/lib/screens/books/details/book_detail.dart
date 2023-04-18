@@ -14,7 +14,6 @@ class BookDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: const AkataboBackButton(),
-        title: Text(akataBook.title),
       ),
       body: ListView(
         padding: horizontalPadding8,

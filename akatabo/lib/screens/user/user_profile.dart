@@ -42,6 +42,31 @@ class UserProfile extends ConsumerWidget {
 
           // profile info
           ProfileInfo(appUser: appUser),
+
+          const VerticalSpace(of: spacing16),
+
+          // logout button
+          Padding(
+            padding: padding16,
+            child: AppButton(
+              icon: Icons.logout,
+              label: "LOG OUT",
+              buttonColor: akataboRed,
+              textColor: akataboWhite,
+              onTap: () async {
+                // go to auth
+                context.go(authPath);
+
+                // await firebaseAuth.signOut();
+
+                // if (!isThumbsWeb) {
+                //   await GoogleSignIn().signOut();
+                // }
+              },
+            ),
+          ),
+
+          const VerticalSpace(of: spacing32),
         ],
       ),
     );

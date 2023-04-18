@@ -1,0 +1,3 @@
+Disable Screenshots 
+as per https://dev.to/odinachi/how-to-block-screenshot-in-your-flutter-app-18d5
+

@@ -4,8 +4,9 @@ import '../../akatabo_exporter.dart';
 final List<BookCategory> bookCategories = [
   BookCategory(
     title: "Science",
-    image: defaultBookImage,
     colorCode: akataboGreen.value,
+    image:
+        "https://raw.githubusercontent.com/capps096github/Akatabo/master/images/science.png?token=GHSAT0AAAAAAB4VCTBW3MQDXT2QAJYD5F3EZB6IDGA",
     bookIds: ["bookIds"],
     gradientColors: [
       const Color(0xFF5BD3A5),
@@ -14,7 +15,8 @@ final List<BookCategory> bookCategories = [
   ),
   BookCategory(
     title: "English",
-    image: defaultBookImage,
+    image:
+        "https://raw.githubusercontent.com/capps096github/Akatabo/master/images/english.png?token=GHSAT0AAAAAAB4VCTBWZ3PINJZ4KXQJXJCQZB6IB5Q",
     colorCode: akataboRed.value,
     bookIds: ["bookIds"],
     gradientColors: [
@@ -24,7 +26,8 @@ final List<BookCategory> bookCategories = [
   ),
   BookCategory(
     title: "SST",
-    image: defaultBookImage,
+    image:
+        "https://raw.githubusercontent.com/capps096github/Akatabo/master/images/sst.png?token=GHSAT0AAAAAAB4VCTBXVTJSG5YSXYRVWXD2ZB6IEBA",
     colorCode: akataboColor.value,
     bookIds: ["bookIds"],
     gradientColors: [
@@ -34,7 +37,8 @@ final List<BookCategory> bookCategories = [
   ),
   BookCategory(
     title: "Mathematics",
-    image: defaultBookImage,
+    image:
+        "https://raw.githubusercontent.com/capps096github/Akatabo/master/images/math.png?token=GHSAT0AAAAAAB4VCTBW67Q4GILFMAKKKSVAZB6ICZQ",
     colorCode: akataboPink.value,
     bookIds: ["bookIds"],
     gradientColors: [

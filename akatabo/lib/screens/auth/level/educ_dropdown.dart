@@ -1,5 +1,4 @@
 import '../../../akatabo_exporter.dart';
-import '../auth_providers.dart';
 
 class EducationLevelDropdown extends ConsumerWidget {
   const EducationLevelDropdown({
@@ -55,13 +54,26 @@ class EducationLevelDropdown extends ConsumerWidget {
           educationLevels.length,
           (_) => Align(
             alignment: Alignment.centerLeft,
-            child: Text(
-              levelOfEduc,
-              style: const TextStyle(
-                color: akataboColor,
-                fontSize: 16,
-                fontWeight: FontWeight.w900,
-              ),
+            child: Row(
+              children: [
+                // radio button
+                const Icon(
+                  Icons.radio_button_checked,
+                  color: akataboColor,
+                ),
+
+                const HorizontalSpace(of: spacing8),
+
+                // text
+                Text(
+                  levelOfEduc,
+                  style: const TextStyle(
+                    color: akataboColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ],
             ),
           ),
         ),

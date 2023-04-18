@@ -16,7 +16,13 @@ AppBar homeAppBar(BuildContext context, WidgetRef ref) {
   final akataboUser = ref.watch(akataboUserProvider);
 
   return AppBar(
-    title: Text(title),
+    title: isHomeScreen
+        ? Image.asset(
+            smallIcon,
+            fit: BoxFit.fill,
+            height: 40,
+          )
+        : Text(title),
     elevation: 0,
     scrolledUnderElevation: 0,
     leading: IconButton(

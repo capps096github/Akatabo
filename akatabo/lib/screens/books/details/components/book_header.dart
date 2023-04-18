@@ -13,7 +13,7 @@ class BookHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: recentBooksCoverHeight,
+      // height: recentBooksCoverHeight,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -35,48 +35,70 @@ class BookHeader extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  // title and author and rating and price
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       // author
                       Text(
-                        "by ${akataBook.author}",
+                        akataBook.author,
+                        maxLines: 1,
                         style: const TextStyle(
                           fontSize: fontSize16,
+                          color: akataboColor,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
 
                       const VerticalSpace(of: spacing8),
 
-                      // price
+                      // title
                       Text(
-                        ugxFormatter.format(akataBook.price),
+                        akataBook.title,
+                        maxLines: 2,
                         style: const TextStyle(
-                          fontSize: fontSize24,
+                          fontSize: fontSize20,
+                          color: akataboSecondaryColor,
                           fontWeight: FontWeight.bold,
-                          color: akataboColor,
                         ),
                       ),
-                      const VerticalSpace(of: spacing16),
+
+                      const VerticalSpace(of: spacing8),
 
                       // rating
-                      RatingBarIndicator(
-                        rating: akataBook.rating,
-                        itemBuilder: (context, index) => const Icon(
-                          Icons.star,
-                          color: akataboRatingsColor,
-                        ),
-                        unratedColor: akataboSecondaryColor.withOpacity(.2),
-                        itemCount: 5,
-                        itemSize: 20.0,
+                      Wrap(
+                        runSpacing: spacing8,
+                        spacing: spacing8,
+                        alignment: WrapAlignment.start,
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: [
+                          RatingBarIndicator(
+                            rating: akataBook.rating,
+                            itemBuilder: (context, index) => const Icon(
+                              Icons.star,
+                              color: akataboRatingsColor,
+                            ),
+                            unratedColor: akataboSecondaryColor.withOpacity(.2),
+                            itemCount: 5,
+                            itemSize: 20.0,
+                          ),
+                          // price
+                          Text(
+                            ugxFormatter.format(akataBook.price),
+                            style: const TextStyle(
+                              fontSize: fontSize18,
+                              fontWeight: FontWeight.bold,
+                              color: akataboColor,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                  const VerticalSpace(of: spacing8),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                  const VerticalSpace(of: spacing16),
+                  Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
                     children: const [
                       // user
                       Icon(

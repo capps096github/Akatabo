@@ -2,7 +2,7 @@
 
 // initial path
 const initialPath = homePath;
-// const initialPath = checkoutPath;
+// const initialPath = authPath;
 
 // * ------------------------------
 // home path

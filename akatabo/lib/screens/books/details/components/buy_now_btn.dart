@@ -11,7 +11,7 @@ class BuyNowButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: padding4,
+      padding: padding16,
       child: AppButton(
         label: "Buy Now",
         onTap: () {},

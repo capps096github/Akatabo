@@ -19,12 +19,12 @@ final forgotFormKeyProvider =
 // auth error text provider
 final authErrorTextProvider = StateProvider<String>((_) => '');
 
-
 ///whether the email to rest password has been sent
 final isResetEmailSentProvider = StateProvider((ref) => false);
 
-// 
+//
 final List<String> educationLevels = [
+  "Nursery",
   "Primary",
   "Secondary",
   "Tertiary (University)",
@@ -32,7 +32,6 @@ final List<String> educationLevels = [
   "PhD",
   "Other",
 ];
-
 
 // level of education provider
 final levelOfEducProvider = StateProvider((ref) => educationLevels.first);

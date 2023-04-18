@@ -1,11 +1,13 @@
 // riverpod_annotaion
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../providers/user_provider.dart';
+
 part 'greeting_provider.g.dart';
 
 @riverpod
 String greeting(GreetingRef ref) {
-  // final akataboUser = ref.watch(akataboUserProvider);
+  final akataboUser = ref.watch(akataboUserProvider);
 
   // date
   final now = DateTime.now();
@@ -17,6 +19,6 @@ String greeting(GreetingRef ref) {
           ? "Good Afternoon"
           : "Good Evening";
 
-  return greeting;
-  // return "$greeting, ${akataboUser.firstName}";
+  // return greeting;
+  return "$greeting, ${akataboUser.firstName}";
 }

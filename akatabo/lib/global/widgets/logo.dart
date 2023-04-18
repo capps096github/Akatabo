@@ -13,7 +13,7 @@ class AkataboLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      smallIcon,
+      fullIcon,
       fit: BoxFit.fill,
       width: width,
       height: height,

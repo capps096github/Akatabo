@@ -6,6 +6,9 @@ final akataboDefaultUserProvider = Provider<AkataboUser>((ref) {
   final email = ref.watch(emailProvider);
   final name = ref.watch(userNameProvider);
 
+  // level of education
+  final levelOfEduc = ref.watch(levelOfEducProvider);
+
   return AkataboUser(
     userId: const Uuid().v4(),
     profilePic:
@@ -13,7 +16,7 @@ final akataboDefaultUserProvider = Provider<AkataboUser>((ref) {
     username: name,
     email: email,
     phoneNumber: '08012345678',
-    levelOfEduc: 'Primary 1',
+    levelOfEduc: levelOfEduc,
     address: 'Akatabo, Lagos, Nigeria',
     billingDetails: '9560045678392',
   );

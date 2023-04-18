@@ -46,12 +46,11 @@ class YourMethod extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // radio button
-                Radio(
-                  value: 1,
-                  groupValue: 1,
-                  onChanged: (_) {},
-                  activeColor: akataboRadioButtonColor,
+                const Icon(
+                  Icons.radio_button_checked,
+                  color: akataboRadioButtonColor,
                 ),
+
                 const HorizontalSpace(of: spacing8),
                 //
                 Text(

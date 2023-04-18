@@ -34,6 +34,8 @@ class AkataboBooksList extends ConsumerWidget {
             title: SearchContainer(),
           ),
 
+          const SliverVerticalSpace(of: spacing32),
+
           // list of books
           SliverPadding(
             padding: horizontalPadding8,
