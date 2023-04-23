@@ -1,6 +1,5 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
-import '../auth_providers.dart';
 import '../components/auth_error_text.dart';
 import '../components/auth_option_text.dart';
 import '../components/or_text.dart';

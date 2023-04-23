@@ -1,6 +1,5 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
-import '../auth_providers.dart';
 import 'email_sent.dart';
 import 'forgot_form.dart';
 

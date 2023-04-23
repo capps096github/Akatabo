@@ -1,5 +1,4 @@
 import '../../../akatabo_exporter.dart';
-import '../auth_providers.dart';
 
 class AuthErrorText extends ConsumerWidget {
   const AuthErrorText({super.key});

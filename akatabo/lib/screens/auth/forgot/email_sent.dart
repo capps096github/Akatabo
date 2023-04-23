@@ -3,7 +3,6 @@
 import 'package:flutter/cupertino.dart';
 
 import '../../../akatabo_exporter.dart';
-import '../auth_providers.dart';
 import '../components/auth_option_text.dart';
 
 class EmailSent extends ConsumerWidget {

@@ -1,6 +1,5 @@
 import '../../../akatabo_exporter.dart';
 import '../auth_page.dart';
-import '../auth_providers.dart';
 
 class AuthOptionText extends ConsumerWidget {
   const AuthOptionText({

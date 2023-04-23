@@ -1,5 +1,4 @@
 import '../../akatabo_exporter.dart';
-import 'auth_providers.dart';
 import 'forgot/forgot_screen.dart';
 import 'level/educ_level.dart';
 import 'login/login_screen.dart';

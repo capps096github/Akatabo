@@ -1,6 +1,7 @@
 import '../../../akatabo_exporter.dart';
 import '../navbar/screens_data.dart';
 import '../providers/exporter.dart';
+import 'profile_pic.dart';
 
 AppBar homeAppBar(BuildContext context, WidgetRef ref) {
   final navBarIndex = ref.watch(selectedNavBarIndexProvider);
@@ -12,46 +13,16 @@ AppBar homeAppBar(BuildContext context, WidgetRef ref) {
   final title = isHomeScreen ? 'Akatabo' : navScreens[navBarIndex].name;
   //
 
-  // app user from akataboUser
-  final akataboUser = ref.watch(akataboUserProvider);
-
   return AppBar(
     title: isHomeScreen
         ? Image.asset(
-            smallIcon,
+            fullIcon,
             fit: BoxFit.fill,
-            height: 40,
+            height: 45,
           )
         : Text(title),
     elevation: 0,
     scrolledUnderElevation: 0,
-    leading: IconButton(
-      icon: const Icon(Icons.menu),
-      onPressed: () {
-        // Scaffold.of(context).openDrawer();
-      },
-    ),
-    actions: [
-      // profile
-      Padding(
-        padding: padding8,
-        child: InkWell(
-          onTap: () {
-            // navigate to the profile page
-            context.push(profilePath);
-          },
-          borderRadius: borderRadius4,
-          child: Hero(
-            tag: userProfileTag,
-            child: AppImage(
-              imageUrl: akataboUser.profilePic,
-              borderRadius: borderRadius4,
-              width: spacing40,
-              height: spacing40,
-            ),
-          ),
-        ),
-      ),
-    ],
+    leading: const HomeProfilePic(),
   );
 }

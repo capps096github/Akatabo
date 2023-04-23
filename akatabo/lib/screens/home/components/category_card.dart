@@ -72,8 +72,9 @@ class CategoryCard extends ConsumerWidget {
               child: AppImage(
                 imageUrl: image,
                 fit: BoxFit.fill,
+                backgroundColor: bookCategory.gradientColors.last,
                 borderRadius: borderRadius4,
-                // height: imageSize,
+                height: imageSize,
                 width: imageSize,
               ),
             ),

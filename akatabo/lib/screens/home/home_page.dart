@@ -24,7 +24,13 @@ class HomePage extends StatelessWidget {
           const SliverVerticalSpace(of: spacing16),
 
           // title
-          SectionTitle(title: "Categories", onTap: () {}),
+          SectionTitle(
+            title: "Categories",
+            onTap: () {
+              // go to list of books
+              context.push(seeAllCategoriesPath);
+            },
+          ),
 
           // categories
           const CategoriesGrid(),
@@ -32,7 +38,13 @@ class HomePage extends StatelessWidget {
           const SliverVerticalSpace(of: spacing32),
 
           // title
-          SectionTitle(title: "Videos for You", onTap: () {}),
+          SectionTitle(
+            title: "Videos for You",
+            onTap: () {
+              // go to list of books
+              context.push(seeAllVideosPath);
+            },
+          ),
 
           // videos
           const VideosList(),

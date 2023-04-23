@@ -14,8 +14,6 @@ class AkataboHome extends ConsumerWidget {
       appBar: homeAppBar(context, ref),
       body: const HomeScreens(),
       bottomNavigationBar: const HomeNavbar(),
-      // TODO add FAB
-      // floatingActionButton: const HomeFAB(),
     );
   }
 }

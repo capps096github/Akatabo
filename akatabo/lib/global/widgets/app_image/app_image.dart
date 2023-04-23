@@ -9,6 +9,8 @@ class AppImage extends StatelessWidget {
     this.fit = BoxFit.cover,
     this.width,
     this.height,
+    this.backgroundColor = akataboColor,
+    this.textColor = akataboWhite,
   });
 
   final String imageUrl;
@@ -18,6 +20,9 @@ class AppImage extends StatelessWidget {
 
   // width and height are optional
   final double? width, height;
+
+  final Color backgroundColor;
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +41,8 @@ class AppImage extends StatelessWidget {
           errorWidget: (context, url, _) => AkataboErrorPlaceHolder(
             errorText: 'The image on the $url could not be loaded',
             errorTitle: "Unable to Load Image",
+            backgroundColor: backgroundColor,
+            textColor: textColor,
           ),
         ),
       ),

@@ -1,6 +1,5 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
-import '../auth_providers.dart';
 
 class ToForgotPasswordButton extends ConsumerWidget {
   const ToForgotPasswordButton({

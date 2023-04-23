@@ -1,5 +1,4 @@
 import '../../akatabo_exporter.dart';
-import '../screens/auth/level/educ_level.dart';
 
 ///* this provides the default router delegate for the app
 
@@ -54,6 +53,19 @@ final akataboRouter = GoRouter(
       path: checkoutPath,
       builder: (context, state) => const AkataboCheckout(),
     ),
+
+    // * see all
+    // categories
+    GoRoute(
+      path: seeAllCategoriesPath,
+      builder: (context, state) => const SeeAllCategories(),
+    ),
+
+    // videos
+    // GoRoute(
+    //   path: seeAllVideosPath,
+    //   builder: (context, state) => const SeeAllVideos(),
+    // ),
   ],
 
   redirect: (_, state) {

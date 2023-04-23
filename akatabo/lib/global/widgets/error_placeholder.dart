@@ -5,8 +5,8 @@ import '../../akatabo_exporter.dart';
 class AkataboErrorPlaceHolder extends StatelessWidget {
   const AkataboErrorPlaceHolder({
     Key? key,
-    this.backgroundColor = akataboColor,
-    this.textColor = akataboWhite,
+    required this.backgroundColor,
+    required this.textColor,
     this.iconSize = 30,
     required this.errorText,
     required this.errorTitle,
@@ -23,10 +23,13 @@ class AkataboErrorPlaceHolder extends StatelessWidget {
 
     //
     return Container(
-      color: backgroundColor.withOpacity(.8),
+      decoration: BoxDecoration(
+        borderRadius: borderRadius8,
+        color: backgroundColor.withOpacity(.8),
+      ),
       child: const Padding(
         padding: padding8,
-        child: AkataboLogo(),
+        child: AkataboLogo(isFull: false),
       ),
     );
   }

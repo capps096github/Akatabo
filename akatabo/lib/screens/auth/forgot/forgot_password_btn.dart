@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 
 // Project imports:
 import '../../../akatabo_exporter.dart';
-import '../auth_providers.dart';
 
 class ForgotPasswordButton extends ConsumerStatefulWidget {
   const ForgotPasswordButton({super.key});

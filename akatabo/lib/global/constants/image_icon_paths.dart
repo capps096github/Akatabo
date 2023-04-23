@@ -1,15 +1,14 @@
-
 // splash image
-const String splashImage = 'assets/images/splash_image.png';
+const String splashImage = 'assets/images/splash_image.jpg';
 
 // login image
-const String loginImage = 'assets/images/login_image.png';
+const String loginImage = 'assets/images/login_image.jpg';
 
 // signup image
-const String signupImage = 'assets/images/signup_image.png';
+const String signupImage = 'assets/images/signup_image.jpg';
 
 // get image
-const String getImage = 'assets/images/get_image.png';
+const String getImage = 'assets/images/get_image.jpg';
 
 // google icon
 const String googleIcon = "assets/images/google.svg";

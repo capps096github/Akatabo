@@ -6,7 +6,7 @@ final List<BookCategory> bookCategories = [
     title: "Science",
     colorCode: akataboGreen.value,
     image:
-        "https://raw.githubusercontent.com/capps096github/Akatabo/master/images/science.png?token=GHSAT0AAAAAAB4VCTBW3MQDXT2QAJYD5F3EZB6IDGA",
+        "https://raw.githubusercontent.com/capps096github/AppsArt/master/akatabo/science.png",
     bookIds: ["bookIds"],
     gradientColors: [
       const Color(0xFF5BD3A5),
@@ -16,7 +16,7 @@ final List<BookCategory> bookCategories = [
   BookCategory(
     title: "English",
     image:
-        "https://raw.githubusercontent.com/capps096github/Akatabo/master/images/english.png?token=GHSAT0AAAAAAB4VCTBWZ3PINJZ4KXQJXJCQZB6IB5Q",
+        "https://raw.githubusercontent.com/capps096github/AppsArt/master/akatabo/english.png",
     colorCode: akataboRed.value,
     bookIds: ["bookIds"],
     gradientColors: [
@@ -27,7 +27,7 @@ final List<BookCategory> bookCategories = [
   BookCategory(
     title: "SST",
     image:
-        "https://raw.githubusercontent.com/capps096github/Akatabo/master/images/sst.png?token=GHSAT0AAAAAAB4VCTBXVTJSG5YSXYRVWXD2ZB6IEBA",
+        "https://raw.githubusercontent.com/capps096github/AppsArt/master/akatabo/sst.png",
     colorCode: akataboColor.value,
     bookIds: ["bookIds"],
     gradientColors: [
@@ -38,7 +38,7 @@ final List<BookCategory> bookCategories = [
   BookCategory(
     title: "Mathematics",
     image:
-        "https://raw.githubusercontent.com/capps096github/Akatabo/master/images/math.png?token=GHSAT0AAAAAAB4VCTBW67Q4GILFMAKKKSVAZB6ICZQ",
+        "https://raw.githubusercontent.com/capps096github/AppsArt/master/akatabo/math.png",
     colorCode: akataboPink.value,
     bookIds: ["bookIds"],
     gradientColors: [

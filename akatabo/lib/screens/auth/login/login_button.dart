@@ -1,6 +1,5 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
-import '../auth_providers.dart';
 import '../functions/functions.dart';
 
 class LogInButton extends ConsumerStatefulWidget {
