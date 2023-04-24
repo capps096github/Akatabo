@@ -1,6 +1,6 @@
 # akatabo
 
-## Akatabo | The school library in the palm of your hands.
+## Akatabo | The school library in the palm of your hands
 
 Akatabo | The school library in the palm of your hands. Is a digital library that provides access to a wide range of books, magazines, newspapers, and other reading materials to students.
 

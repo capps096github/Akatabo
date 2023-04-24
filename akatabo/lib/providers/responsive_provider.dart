@@ -10,3 +10,4 @@ AkataboResponsive akataboResponsive(
     AkataboResponsiveRef ref, BuildContext context) {
   return AkataboResponsive(context: context);
 }
+

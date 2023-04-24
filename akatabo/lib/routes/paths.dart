@@ -32,7 +32,7 @@ const checkoutPath = '/checkout';
 // * see all paths
 
 // categories
-const seeAllCategoriesPath = 'see-all-categories';
+const seeAllCategoriesPath = '/see-all-categories';
 
 // videos
-const seeAllVideosPath = 'see-all-videos';
+const seeAllVideosPath = '/see-all-videos';

@@ -9,8 +9,9 @@ import android.view.WindowManager.LayoutParams
 
 
 class MainActivity: FlutterActivity() {
-   override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
-        window.addFlags(LayoutParams.FLAG_SECURE)
-        GeneratedPluginRegistrant.registerWith(flutterEngine)
-    }
+//    TODO Enable this to support disabling screenshots
+//   override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+//        window.addFlags(LayoutParams.FLAG_SECURE)
+//        GeneratedPluginRegistrant.registerWith(flutterEngine)
+//    }
 }

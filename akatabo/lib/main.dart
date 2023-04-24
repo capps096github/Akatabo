@@ -11,10 +11,7 @@ void main() {
   //
   runApp(
     const ProviderScope(
-      child: 
-      Akatabo(),
+      child: Akatabo(),
     ),
   );
 }
-
-
