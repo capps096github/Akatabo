@@ -1,6 +1,6 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
-import '../functions/functions.dart';
+import '../functions/auth_fx.dart';
 
 class LogInButton extends ConsumerStatefulWidget {
   const LogInButton({super.key});
@@ -33,26 +33,27 @@ class _SignInButtonState extends ConsumerState<LogInButton> {
         }
 
         if (signInFormKey.currentState!.validate()) {
-          //     update button state
           setState(() {
-            isButtonTapped = !isButtonTapped;
+            isButtonTapped = true;
           });
 
-          //   await signInToThumbsApp(email: email, password: password, ref: ref)
-          //       .then((_) {
-          //     // check if widget is mounted
-          //     if (mounted) {
-          //       //  update button state
-          //       setState(() {
-          //         isButtonTapped = !isButtonTapped;
-          //       });
-          //       // clear the form after sign in
-          //       signInFormKey.currentState!.reset();
-          //     }
-          //   });
+          await loginToAkatabo(email: email, password: password, ref: ref).then(
+            (value) {
+              // ignore: avoid_print
+              print("User Signed In");
+              if (mounted) {
+                setState(() {
+                  isButtonTapped = false;
+                });
+              }
 
-          // * simulated auth
-          await authSimulation().then((_) => context.go(homePath));
+              // clear the form after sign in
+              signInFormKey.currentState!.reset();
+
+              // Go to Home
+              context.go(homePath);
+            },
+          );
         }
       },
       text: "LOG IN",

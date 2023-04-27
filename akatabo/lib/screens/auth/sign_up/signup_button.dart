@@ -1,7 +1,7 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
 import '../auth_page.dart';
-import '../functions/functions.dart';
+import '../functions/auth_fx.dart';
 
 class SignUpButton extends ConsumerStatefulWidget {
   const SignUpButton({super.key});
@@ -40,39 +40,39 @@ class _SignUpButtonState extends ConsumerState<SignUpButton> {
                 currentFocus.unfocus();
               }
 
+              // validate the form 
+              // and then authenticate if valid
               if (signUpFormKey.currentState!.validate()) {
-                //  update button state
                 setState(() {
-                  isButtonTapped = !isButtonTapped;
+                  isButtonTapped = true;
                 });
 
-                // await signUpForThumbsApp(
-                //   email: email,
-                //   password: password,
-                //   name: name,
-                //   ref: ref,
-                // ).then((_) {
-                //   // check if widget is mounted
+                // * Sign Up
+                await signUpForAkatabo(
+                  email: email,
+                  password: password,
+                  name: name,
+                  ref: ref,
+                ).then(
+                  (_) async {
+                    // ignore: avoid_print
+                    print("User Signed Up - Created");
+                    if (mounted) {
+                      setState(() {
+                        isButtonTapped = false;
+                      });
+                    }
 
-                //   if (mounted) {
-                //     //  update button state
-                // setState(() {
-                //   isButtonTapped = !isButtonTapped;
-                // });
+                    // clear the form after sign in
+                    signUpFormKey.currentState!.reset();
 
-                //     // clear the form after sign in
-                //     signUpFormKey.currentState!.reset();
-                //   }
-                // });
-
-                // then go to the select level page index
-                // * simulated auth
-                await authSimulation().then(
-                  (_) => ref.read(authPageIndexProvider.notifier).state =
-                      authPages.indexOf(
-                    authPages.last,
-                  ),
+                    // then go to the select level page index
+                    ref.read(authPageIndexProvider.notifier).state =
+                        authPages.indexOf(authPages.last);
+                  },
                 );
+
+                //
               }
             }
           : () {

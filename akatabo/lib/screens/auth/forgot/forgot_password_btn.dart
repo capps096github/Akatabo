@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 // Project imports:
 import '../../../akatabo_exporter.dart';
+import '../functions/forgot_akatabo_password.dart';
 
 class ForgotPasswordButton extends ConsumerStatefulWidget {
   const ForgotPasswordButton({super.key});
@@ -34,13 +35,23 @@ class _ForgotPasswordButtonState extends ConsumerState<ForgotPasswordButton> {
         if (forgotFormKey.currentState!.validate()) {
           //  update button state
           setState(() {
-            isButtonTapped = !isButtonTapped;
+            isButtonTapped = true;
           });
-          // await forgotThumbsPassword(email: email, ref: ref);
 
-          //  update button state
-          setState(() {
-            isButtonTapped = !isButtonTapped;
+          // send reset password email
+          await forgotAkataboPassword(email: email).then((_) {
+            // update the isResetEmailSent
+            ref.read(isResetEmailSentProvider.notifier).state = true;
+
+            // ignore: avoid_print
+            print("Pass reset email sent");
+
+            // update button state
+            if (mounted) {
+              setState(() {
+                isButtonTapped = false;
+              });
+            }
           });
         }
 

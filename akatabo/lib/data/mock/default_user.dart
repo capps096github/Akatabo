@@ -19,5 +19,8 @@ final akataboDefaultUserProvider = Provider<AkataboUser>((ref) {
     levelOfEduc: levelOfEduc,
     address: 'Akatabo, Lagos, Nigeria',
     billingDetails: '9560045678392',
+    authProvider: 'Akatabo Auth',
+    authProviderDisplayName: 'Akatabo Auth',
+    joinedOn: Timestamp.now(),
   );
 });

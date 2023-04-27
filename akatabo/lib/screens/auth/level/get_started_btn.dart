@@ -1,5 +1,4 @@
 import '../../../akatabo_exporter.dart';
-import '../functions/functions.dart';
 
 class GetStartedButton extends ConsumerStatefulWidget {
   const GetStartedButton({super.key});
@@ -13,6 +12,12 @@ class _GetStartedButtonState extends ConsumerState<GetStartedButton> {
 
   @override
   Widget build(BuildContext context) {
+    // level of education from provider
+    final levelOfEduc = ref.watch(levelOfEducProvider);
+
+    // akatabo db service
+    final akataboDBService = ref.watch(akataboDBServiceProvider);
+
     //
     return CircularProgressAppButton(
       isTapped: isButtonTapped,
@@ -20,15 +25,25 @@ class _GetStartedButtonState extends ConsumerState<GetStartedButton> {
       text: "Get Started",
       icon: Icons.chevron_right,
       onTap: () async {
-        // add level of education to the user db
-
+        // set the button to tapped
         setState(() {
-          isButtonTapped = !isButtonTapped;
+          isButtonTapped = true;
         });
 
         // go to home page
         // * simulated auth
-        await authSimulation().then((_) {
+        await akataboDBService
+            .updateLevelOfEduc(levelOfEduc: levelOfEduc)
+            .then((_) {
+          // set the button to not tapped
+          // ignore: avoid_print
+          print("User Level of Education Updated");
+          if (mounted) {
+            setState(() {
+              isButtonTapped = false;
+            });
+          }
+
           // reset the auth index provider
           ref.read(authPageIndexProvider.notifier).state = 0;
 

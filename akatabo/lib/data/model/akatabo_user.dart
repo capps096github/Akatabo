@@ -1,4 +1,4 @@
-import 'dart:convert';
+import '../../akatabo_exporter.dart';
 
 class AkataboUser {
   // profile pic
@@ -25,18 +25,32 @@ class AkataboUser {
   // user id
   final String userId;
 
+  // authentication by
+  final String authProvider;
+
+  // authenticationProvider name
+  final String authProviderDisplayName;
+
+  // timestamp: joined Calcut on
+  final Timestamp joinedOn;
+
+  // isEmailVerified
+  final bool isEmailVerified;
+
   AkataboUser({
     required this.userId,
     required this.profilePic,
     required this.username,
     required this.email,
-    required this.phoneNumber,
-    required this.levelOfEduc,
-    required this.address,
-    required this.billingDetails,
-  })
-  // : userId = const FirebaseAuth.instance.currentUser!.uid get id from here
-  ;
+    required this.authProvider,
+    required this.authProviderDisplayName,
+    required this.joinedOn,
+    this.isEmailVerified = false,
+    this.levelOfEduc = '',
+    this.phoneNumber = '',
+    this.address = '',
+    this.billingDetails = '',
+  });
 
   /// first name
   String get firstName => username.split(' ')[0];
@@ -49,17 +63,12 @@ class AkataboUser {
     return '$first3******$last1';
   }
 
-
-  
-
   @override
   String toString() {
     return 'AkataboUser(profilePic: $profilePic, username: $username, email: $email, phone: $phoneNumber, levelOfEduc: $levelOfEduc, address: $address, billingDetails: $billingDetails)';
   }
 
   Map<String, dynamic> toFirestore() {
-    
-    // 
     return {
       'profilePic': profilePic,
       'username': username,
@@ -69,12 +78,13 @@ class AkataboUser {
       'address': address,
       'billingDetails': billingDetails,
       'userId': userId,
+      'authProvider': authProvider,
+      'authProviderDisplayName': authProviderDisplayName,
+      'joinedOn': joinedOn,
     };
   }
 
   factory AkataboUser.fromFirestore({required Map<String, dynamic> userMap}) {
-
-    // 
     return AkataboUser(
       profilePic: userMap['profilePic'] ?? '',
       username: userMap['username'] ?? '',
@@ -84,7 +94,9 @@ class AkataboUser {
       address: userMap['address'] ?? '',
       billingDetails: userMap['billingDetails'] ?? '',
       userId: userMap['userId'] ?? '',
+      authProvider: userMap['authProvider'] ?? '',
+      authProviderDisplayName: userMap['authProviderDisplayName'] ?? '',
+      joinedOn: userMap['joinedOn'] ?? Timestamp.now(),
     );
   }
-
 }

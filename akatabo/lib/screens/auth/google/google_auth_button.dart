@@ -1,6 +1,6 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
-import '../functions/functions.dart';
+import '../functions/google_auth.dart';
 
 class GoogleAuthButton extends ConsumerStatefulWidget {
   const GoogleAuthButton({
@@ -38,23 +38,24 @@ class _GoogleAuthButtonState extends ConsumerState<GoogleAuthButton> {
         if (!currentFocus.hasPrimaryFocus) {
           currentFocus.unfocus();
         }
-
-        //  update button state
+        // set tapped to true
         setState(() {
-          isButtonTapped = !isButtonTapped;
+          isButtonTapped = true;
         });
 
-        // await akataboGoogleAuth(ref: ref).then((_) {
-        //   // check if widget is mounted
-        //   if (mounted) {
-        //     //  update button state
-        // setState(() {
-        //   isButtonTapped = !isButtonTapped;
-        // });
-        //   }
-        // });
+        //  Google Auth
+        await akataboGoogleAuth(ref: ref).then((_) {
+          // ignore: avoid_print
+          print("User Signed In");
+          if (mounted) {
+            setState(() {
+              isButtonTapped = false;
+            });
+          }
 
-        await authSimulation().then((_) => context.go(homePath));
+          // Go to Home
+          context.go(homePath);
+        });
       },
       iconWidget: SvgPicture.asset(
         googleIcon,

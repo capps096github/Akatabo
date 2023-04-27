@@ -1,12 +1,6 @@
-// riverpod_annotaion
-import 'package:riverpod_annotation/riverpod_annotation.dart';
+import '../../../akatabo_exporter.dart';
 
-import '../../../providers/user_provider.dart';
-
-part 'greeting_provider.g.dart';
-
-@riverpod
-String greeting(GreetingRef ref) {
+final greetingProvider = Provider<String>((ref) {
   final akataboUser = ref.watch(akataboUserProvider);
 
   // date
@@ -21,4 +15,4 @@ String greeting(GreetingRef ref) {
 
   // return greeting;
   return "$greeting, ${akataboUser.firstName}";
-}
+});

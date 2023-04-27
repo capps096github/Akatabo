@@ -18,3 +18,6 @@ const String userProfileTag = 'userProfile';
 
 // default book cover
 const defaultBookCover = 'https://images.unsplash.com/photo-1598618443855-232ee0f819f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60';
+
+// default profile pic
+const defaultProfilePic = 'https://images.unsplash.com/photo-1517148892120-4d2da39c8dc1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80';
