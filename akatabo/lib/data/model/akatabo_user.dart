@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class AkataboUser {
   // profile pic
   final String profilePic;
@@ -47,8 +49,42 @@ class AkataboUser {
     return '$first3******$last1';
   }
 
+
+  
+
   @override
   String toString() {
     return 'AkataboUser(profilePic: $profilePic, username: $username, email: $email, phone: $phoneNumber, levelOfEduc: $levelOfEduc, address: $address, billingDetails: $billingDetails)';
   }
+
+  Map<String, dynamic> toFirestore() {
+    
+    // 
+    return {
+      'profilePic': profilePic,
+      'username': username,
+      'email': email,
+      'phoneNumber': phoneNumber,
+      'levelOfEduc': levelOfEduc,
+      'address': address,
+      'billingDetails': billingDetails,
+      'userId': userId,
+    };
+  }
+
+  factory AkataboUser.fromFirestore({required Map<String, dynamic> userMap}) {
+
+    // 
+    return AkataboUser(
+      profilePic: userMap['profilePic'] ?? '',
+      username: userMap['username'] ?? '',
+      email: userMap['email'] ?? '',
+      phoneNumber: userMap['phoneNumber'] ?? '',
+      levelOfEduc: userMap['levelOfEduc'] ?? '',
+      address: userMap['address'] ?? '',
+      billingDetails: userMap['billingDetails'] ?? '',
+      userId: userMap['userId'] ?? '',
+    );
+  }
+
 }

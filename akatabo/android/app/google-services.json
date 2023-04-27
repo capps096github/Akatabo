@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "241626257761",
+    "project_id": "akatabo-app",
+    "storage_bucket": "akatabo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241626257761:android:711de7d4145a66ed544d20",
+        "android_client_info": {
+          "package_name": "com.capps06.akatabo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241626257761-756rvj3gbu96h39sioelgt478ddavke0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANd7S5CAU5_hvFYXRhMJWw0bS0vTFsneU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241626257761-756rvj3gbu96h39sioelgt478ddavke0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

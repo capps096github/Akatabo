@@ -26,6 +26,25 @@ export 'package:percent_indicator/percent_indicator.dart';
 // uuid
 export 'package:uuid/uuid.dart';
 
+//--- Firebase
+export 'package:firebase_core/firebase_core.dart';
+
+// Firebase Analytics
+export 'package:firebase_analytics/firebase_analytics.dart';
+
+// Friebase Auth
+export 'package:firebase_auth/firebase_auth.dart';
+export 'package:google_sign_in/google_sign_in.dart';
+
+// Firebase Cloud
+export 'package:cloud_firestore/cloud_firestore.dart';
+
+// Firebase Messaging
+export 'package:firebase_messaging/firebase_messaging.dart';
+
+// * Toast Messages
+export 'package:flash/flash.dart';
+
 //? app folders
 //* app
 export 'app/exporter.dart';
