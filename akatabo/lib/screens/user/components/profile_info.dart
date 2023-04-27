@@ -14,10 +14,16 @@ class ProfileInfo extends StatelessWidget {
     final userId = appUser.userId;
     final name = appUser.username;
     final email = appUser.email;
-    final phoneNumber = appUser.phoneNumber;
-    final address = appUser.address;
-    final levelOfEducation = appUser.levelOfEduc;
-    final billingDetails = appUser.billingDetailsInfo;
+    final phoneNumber = (appUser.phoneNumber.isEmpty)
+        ? "Set Phone Number"
+        : appUser.phoneNumber;
+    final address = (appUser.address.isEmpty) ? "Set Address" : appUser.address;
+    final levelOfEducation = (appUser.levelOfEduc.isEmpty)
+        ? "Set Level of Education"
+        : appUser.levelOfEduc;
+    final billingDetails = (appUser.billingDetails.isEmpty)
+        ? "Set Billing Details"
+        : appUser.billingDetailsInfo;
 
     return Padding(
       padding: padding4,

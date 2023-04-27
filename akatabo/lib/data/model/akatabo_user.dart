@@ -65,7 +65,7 @@ class AkataboUser {
 
   @override
   String toString() {
-    return 'AkataboUser(profilePic: $profilePic, username: $username, email: $email, phone: $phoneNumber, levelOfEduc: $levelOfEduc, address: $address, billingDetails: $billingDetails)';
+    return 'AkataboUser(profilePic: $profilePic, username: $username, email: $email, phoneNumber: $phoneNumber, levelOfEduc: $levelOfEduc, address: $address, billingDetails: $billingDetails)';
   }
 
   Map<String, dynamic> toFirestore() {

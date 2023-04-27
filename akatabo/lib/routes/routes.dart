@@ -69,9 +69,31 @@ final akataboRouter = GoRouter(
   ],
 
   redirect: (_, state) {
-    // if the user is not logged in, redirect to the auth page
+    //! ** this calcut user is repeated here, and therefore don't delete it
+    final akataboUser = FirebaseAuth.instance.currentUser;
 
-    // if the user is logged in, don't redirect to any page just continue with the initial path
+    // set the user logged in variable
+    final userIsNull = (akataboUser == null);
+
+    // is authenticating
+    final isAuthenticating = (state.subloc == authPath);
+
+    // if the user is on the auth Screen or Welcome screen which also has the auth UI
+    final loggingIn = (isAuthenticating);
+
+    // if the user is null, then ...
+    if (userIsNull) {
+      // if the null user  is on auth or welcome page then we redirect to the auth page
+      // else don't redirect to any page since the user is on the login page
+      return loggingIn ? null : authPath;
+    }
+
+    // if the user is logged in but still on the login page, send them to
+    // the home page
+    if (loggingIn) return homePath;
+
+
+    // no need to redirect at all if all conditions are passed
     return null;
   },
   //

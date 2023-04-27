@@ -1,4 +1,5 @@
 import '../../akatabo_exporter.dart';
+import 'components/logout_button.dart';
 import 'components/profile_header.dart';
 import 'components/profile_info.dart';
 
@@ -20,15 +21,15 @@ class UserProfile extends ConsumerWidget {
           'Profile',
           style: TextStyle(color: akataboWhite),
         ),
-        actions: [
-          // settings
-          IconButton(
-            icon: const Icon(
-              Icons.settings,
-              color: akataboWhite,
-            ),
-            onPressed: () => context.go(settingsPath),
-          ),
+        actions: const [
+          //TODO goto settings
+          // IconButton(
+          //   icon: const Icon(
+          //     Icons.settings,
+          //     color: akataboWhite,
+          //   ),
+          //   onPressed: () => context.go(settingsPath),
+          // ),
         ],
         backgroundColor: akataboSecondaryColor,
       ),
@@ -46,25 +47,7 @@ class UserProfile extends ConsumerWidget {
           const VerticalSpace(of: spacing16),
 
           // logout button
-          Padding(
-            padding: padding16,
-            child: AppButton(
-              icon: Icons.logout,
-              label: "LOG OUT",
-              buttonColor: akataboRed,
-              textColor: akataboWhite,
-              onTap: () async {
-                // go to auth
-                context.go(authPath);
-
-                // await firebaseAuth.signOut();
-
-                // if (!isThumbsWeb) {
-                //   await GoogleSignIn().signOut();
-                // }
-              },
-            ),
-          ),
+          const LogOutButton(),
 
           const VerticalSpace(of: spacing32),
         ],

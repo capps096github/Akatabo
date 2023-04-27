@@ -26,9 +26,9 @@ final akataboUserProvider = StateProvider<AkataboUser>((ref) {
     return userSnaphot.data();
   }).value;
 
-  // print this calcut user as string
+  // print this Akatabo user as string
   // ignore: avoid_print
-  print("Current Calcut User is: ${akataboUser.toString()}");
+  print("Current Akatabo User is: ${akataboUser.toString()}");
 
     // get user from akataboDefaultUserProvider
   final akataboDefaultUser = ref.watch(akataboDefaultUserProvider);

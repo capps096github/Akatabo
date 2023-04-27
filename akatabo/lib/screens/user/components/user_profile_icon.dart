@@ -30,27 +30,27 @@ class UserProfileIcon extends ConsumerWidget {
                   ),
                   appUser: appUser,
                 ),
-                //* edit profile pic icon
-                Positioned(
-                  bottom: 10,
-                  right: 8,
-                  child: Container(
-                    width: spacing40,
-                    height: spacing40,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: akataboSecondaryColor,
-                    ),
-                    child: const Padding(
-                      padding: padding8,
-                      child: Icon(
-                        Icons.edit,
-                        size: 24,
-                        color: akataboWhite,
-                      ),
-                    ),
-                  ),
-                ),
+                //*TODO edit profile pic icon
+                // Positioned(
+                //   bottom: 10,
+                //   right: 8,
+                //   child: Container(
+                //     width: spacing40,
+                //     height: spacing40,
+                //     decoration: const BoxDecoration(
+                //       shape: BoxShape.circle,
+                //       color: akataboSecondaryColor,
+                //     ),
+                //     child: const Padding(
+                //       padding: padding8,
+                //       child: Icon(
+                //         Icons.edit,
+                //         size: 24,
+                //         color: akataboWhite,
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),

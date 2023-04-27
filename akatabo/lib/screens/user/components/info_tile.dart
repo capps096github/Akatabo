@@ -81,10 +81,11 @@ class InfoTile extends StatelessWidget {
                       ),
                     )
                   : null,
-              trailing: Icon(
-                trailingIcon,
-                color: textColor,
-              ),
+              // TODO add trailing icon
+              // trailing: Icon(
+              //   trailingIcon,
+              //   color: textColor,
+              // ),
             ),
             // divider
             const ThickHorizontalDivider(
