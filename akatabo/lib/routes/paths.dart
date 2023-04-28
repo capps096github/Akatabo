@@ -12,6 +12,9 @@ const homePath = '/';
 // auth path
 const authPath = '/auth';
 
+// set educational level
+const setEducLevelPath = '/set-educ-level';
+
 // * ------------------------------
 // profile path
 const profilePath = '/profile';
@@ -36,3 +39,9 @@ const seeAllCategoriesPath = '/see-all-categories';
 
 // videos
 const seeAllVideosPath = '/see-all-videos';
+
+// seeAllRecentsPath
+const seeAllRecentsPath = '/see-all-recents';
+
+// see my books
+const seeMyBooksPath = '/see-my-books';

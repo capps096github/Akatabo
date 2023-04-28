@@ -15,13 +15,21 @@ final akataboRouter = GoRouter(
       builder: (context, state) => const AkataboHome(),
     ),
 
+    // -----------------------------------------
+
     //* auth
     GoRoute(
       path: authPath,
-      // builder: (context, state) => const AkataboSplash(),
       builder: (context, state) => const AkataboAuth(),
-      // builder: (context, state) => const EducationLevel(),
     ),
+
+    //* set
+    GoRoute(
+      path: setEducLevelPath,
+      builder: (context, state) => const SetEducationLevel(),
+    ),
+
+    // -----------------------------------------
 
     //* profile
     GoRoute(
@@ -34,6 +42,8 @@ final akataboRouter = GoRouter(
       path: settingsPath,
       builder: (context, state) => const AkataboSettings(),
     ),
+
+    // -----------------------------------------
 
     // * books
     GoRoute(
@@ -54,6 +64,8 @@ final akataboRouter = GoRouter(
       builder: (context, state) => const AkataboCheckout(),
     ),
 
+    // -----------------------------------------
+
     // * see all
     // categories
     GoRoute(
@@ -62,10 +74,22 @@ final akataboRouter = GoRouter(
     ),
 
     // videos
-    // GoRoute(
-    //   path: seeAllVideosPath,
-    //   builder: (context, state) => const SeeAllVideos(),
-    // ),
+    GoRoute(
+      path: seeAllVideosPath,
+      builder: (context, state) => const SeeAllVideos(),
+    ),
+
+    // recents
+    GoRoute(
+      path: seeAllRecentsPath,
+      builder: (context, state) => const SeeAllRecents(),
+    ),
+
+    // my books
+    GoRoute(
+      path: seeMyBooksPath,
+      builder: (context, state) => const SeeMyBooks(),
+    ),
   ],
 
   redirect: (_, state) {
@@ -91,7 +115,6 @@ final akataboRouter = GoRouter(
     // if the user is logged in but still on the login page, send them to
     // the home page
     if (loggingIn) return homePath;
-
 
     // no need to redirect at all if all conditions are passed
     return null;

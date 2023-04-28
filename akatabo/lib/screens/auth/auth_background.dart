@@ -5,11 +5,14 @@ class AuthBackground extends StatelessWidget {
     super.key,
     required this.screen,
     required this.imagePath,
+     this.horizontalPadding,
   });
 
   final Widget screen;
 
   final String imagePath;
+
+  final double? horizontalPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +49,7 @@ class AuthBackground extends StatelessWidget {
 
         // child
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: spacing16),
+          padding:  EdgeInsets.symmetric(horizontal:horizontalPadding?? spacing16),
           child: SafeArea(
             child: Center(
               child: ConstrainedBox(
@@ -60,4 +63,3 @@ class AuthBackground extends StatelessWidget {
     );
   }
 }
-

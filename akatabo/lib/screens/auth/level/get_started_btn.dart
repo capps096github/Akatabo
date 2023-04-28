@@ -12,12 +12,6 @@ class _GetStartedButtonState extends ConsumerState<GetStartedButton> {
 
   @override
   Widget build(BuildContext context) {
-    // level of education from provider
-    final levelOfEduc = ref.watch(levelOfEducProvider);
-
-    // akatabo db service
-    final akataboDBService = ref.watch(akataboDBServiceProvider);
-
     //
     return CircularProgressAppButton(
       isTapped: isButtonTapped,
@@ -30,26 +24,40 @@ class _GetStartedButtonState extends ConsumerState<GetStartedButton> {
           isButtonTapped = true;
         });
 
-        // go to home page
-        // * simulated auth
-        await akataboDBService
-            .updateLevelOfEduc(levelOfEduc: levelOfEduc)
-            .then((_) {
-          // set the button to not tapped
-          // ignore: avoid_print
-          print("User Level of Education Updated");
-          if (mounted) {
-            setState(() {
-              isButtonTapped = false;
-            });
-          }
+        //  current user id
+        final akataboUserId = FirebaseAuth.instance.currentUser?.uid;
+
+        // level of education from provider
+        final levelOfEduc = ref.watch(levelOfEducProvider);
+
+        // update the level of education in the database
+        if (akataboUserId != null) {
+          await AkataboDBService.updateLevelOfEduc(
+                  levelOfEduc: levelOfEduc, userId: akataboUserId)
+              .then((_) {
+            // set the button to not tapped
+            // ignore: avoid_print
+            print("User Level of Education Updated");
+            if (mounted) {
+              setState(() {
+                isButtonTapped = false;
+              });
+            }
+
+            // reset the auth index provider
+            ref.read(authPageIndexProvider.notifier).state = 0;
+
+            // go to home
+            context.go(homePath);
+          });
+        } else {
+          // login
+          ref.read(authErrorTextProvider.notifier).state =
+              'Login to Set your Level of Education';
 
           // reset the auth index provider
           ref.read(authPageIndexProvider.notifier).state = 0;
-
-          // go to home
-          context.go(homePath);
-        });
+        }
       },
     );
   }

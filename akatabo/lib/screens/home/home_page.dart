@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
           SectionTitle(
             title: "Categories",
             onTap: () {
-              // go to list of books
+              // go to list of categories
               context.push(seeAllCategoriesPath);
             },
           ),

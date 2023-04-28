@@ -1,6 +1,5 @@
 import '../../akatabo_exporter.dart';
 import 'forgot/forgot_screen.dart';
-import 'level/educ_level.dart';
 import 'login/login_screen.dart';
 import 'sign_up/signup_screen.dart';
 
@@ -49,11 +48,6 @@ List<AuthPage> authPages = [
     imagePath: getImage,
     question: "Remember your password?",
     action: "Login",
-    actionPageIndex: 0,
-  ),
-  AuthPage(
-    page: const EducationLevel(),
-    imagePath: getImage,
     actionPageIndex: 0,
   ),
 ];

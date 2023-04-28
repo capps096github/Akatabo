@@ -1,12 +1,12 @@
 import '../../../akatabo_exporter.dart';
 
-class LogOutButton extends StatelessWidget {
+class LogOutButton extends ConsumerWidget {
   const LogOutButton({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
       padding: padding16,
       child: AppButton(
@@ -30,6 +30,9 @@ class LogOutButton extends StatelessWidget {
           ]).then((_) {
             // go to auth
             context.go(authPath);
+
+            // reset the auth index provider
+            ref.read(authPageIndexProvider.notifier).state = 0;
           });
         },
       ),

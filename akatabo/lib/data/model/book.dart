@@ -52,6 +52,7 @@ class AkataBook {
   final double bookSize;
 
   AkataBook({
+    required this.bookId,
     required this.bookUrl,
     required this.title,
     required this.author,
@@ -67,5 +68,47 @@ class AkataBook {
     required this.bookLanguage,
     required this.numOfPages,
     required this.bookSize,
-  }) : bookId = const Uuid().v4();
+  });
+
+  Map<String, dynamic> toFirestore() {
+    return {
+      'bookId': const Uuid().v4(),
+      'title': title,
+      'author': author,
+      'coverImage': coverImage,
+      'description': description,
+      'coverDescription': coverDescription,
+      'categoryId': categoryId,
+      'price': price,
+      'rating': rating,
+      'bookUrl': bookUrl,
+      'publisherNo': publisherNo,
+      'publisher': publisher,
+      'publishedOn': publishedOn.millisecondsSinceEpoch,
+      'bookLanguage': bookLanguage,
+      'numOfPages': numOfPages,
+      'bookSize': bookSize,
+    };
+  }
+
+  factory AkataBook.fromFirestore(Map<String, dynamic> map) {
+    return AkataBook(
+      bookId: map['bookId'] ?? '',
+      title: map['title'] ?? '',
+      author: map['author'] ?? '',
+      coverImage: map['coverImage'] ?? '',
+      description: map['description'] ?? '',
+      coverDescription: map['coverDescription'] ?? '',
+      categoryId: map['categoryId'] ?? '',
+      price: map['price']?.toDouble() ?? 0.0,
+      rating: map['rating']?.toDouble() ?? 0.0,
+      bookUrl: map['bookUrl'] ?? '',
+      publisherNo: map['publisherNo'] ?? '',
+      publisher: map['publisher'] ?? '',
+      publishedOn: DateTime.fromMillisecondsSinceEpoch(map['publishedOn']),
+      bookLanguage: map['bookLanguage'] ?? '',
+      numOfPages: map['numOfPages']?.toInt() ?? 0,
+      bookSize: map['bookSize']?.toDouble() ?? 0.0,
+    );
+  }
 }

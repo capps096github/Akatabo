@@ -37,7 +37,7 @@ class GradientButton extends ConsumerWidget {
     return AnimatedContainer(
       duration: fiftyMilliseconds,
       // for good looking UI o mobile we set this height to 42
-      height: isDesktop ? kDesktopButtonHeight : kButtonHeight,
+      // height: isDesktop ? kDesktopButtonHeight : kButtonHeight,
       width: (isMobile ? width : maxAuthWidth),
       decoration: BoxDecoration(
         color: textColor,

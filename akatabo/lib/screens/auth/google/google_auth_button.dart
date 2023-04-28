@@ -46,15 +46,12 @@ class _GoogleAuthButtonState extends ConsumerState<GoogleAuthButton> {
         //  Google Auth
         await akataboGoogleAuth(ref: ref).then((_) {
           // ignore: avoid_print
-          print("User Signed In");
+          print("User ${widget.text} with Google");
           if (mounted) {
             setState(() {
               isButtonTapped = false;
             });
           }
-
-          // Go to Home
-          context.go(homePath);
         });
       },
       iconWidget: SvgPicture.asset(

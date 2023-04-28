@@ -9,12 +9,14 @@ class AkataboAuth extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final authpage = ref.watch(authPageProvider);
-    // switch index to change screens
-    return Scaffold(
-      backgroundColor: akataboColor,
-      body: AuthBackground(
-        screen: AuthBody(child: authpage.page),
-        imagePath: authpage.imagePath,
+
+    return AkataboSplash(
+      screen: Scaffold(
+        backgroundColor: akataboColor,
+        body: AuthBackground(
+          screen: AuthBody(child: authpage.page),
+          imagePath: authpage.imagePath,
+        ),
       ),
     );
   }

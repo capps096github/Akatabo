@@ -1,9 +1,9 @@
 // sample books
-import '../model/book.dart';
-import 'book_categories.dart';
+import '../../akatabo_exporter.dart';
 
 final List<AkataBook> akataboBooks = [
   AkataBook(
+    bookId: const Uuid().v4(),
     title: 'The Alchemist',
     bookUrl:
         'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
@@ -25,6 +25,7 @@ final List<AkataBook> akataboBooks = [
     bookSize: 3.5,
   ),
   AkataBook(
+    bookId: const Uuid().v4(),
     title: 'Integrated Science Book 4',
     author: 'Paulo Coelho',
     bookUrl:
@@ -46,6 +47,7 @@ final List<AkataBook> akataboBooks = [
     bookSize: 3.5,
   ),
   AkataBook(
+    bookId: const Uuid().v4(),
     title: 'Comprehensive SST Book 7',
     author: 'Paulo Coelho',
     bookUrl:
@@ -67,6 +69,7 @@ final List<AkataBook> akataboBooks = [
     bookSize: 3.5,
   ),
   AkataBook(
+    bookId: const Uuid().v4(),
     title: 'Primary Maths Book 4',
     author: 'Paulo Coelho',
     bookUrl:
@@ -88,6 +91,7 @@ final List<AkataBook> akataboBooks = [
     bookSize: 3.5,
   ),
   AkataBook(
+    bookId: const Uuid().v4(),
     title: 'Gulu - Gulu Goes to School',
     author: 'Paulo Coelho',
     bookUrl:
@@ -109,6 +113,7 @@ final List<AkataBook> akataboBooks = [
     bookSize: 4.5,
   ),
   AkataBook(
+    bookId: const Uuid().v4(),
     title: 'Where is the baby?',
     author: 'MKD Publishers',
     bookUrl:
@@ -130,6 +135,7 @@ final List<AkataBook> akataboBooks = [
     bookSize: 4.2,
   ),
   AkataBook(
+    bookId: const Uuid().v4(),
     title: 'Busy Hospital',
     author: 'MKD Publishers',
     bookUrl:

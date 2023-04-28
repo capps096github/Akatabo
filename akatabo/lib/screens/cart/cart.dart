@@ -28,7 +28,13 @@ class AkataboCart extends StatelessWidget {
           const SliverVerticalSpace(of: spacing64),
 
           // title
-          SectionTitle(title: "Recently Viewed", onTap: () {}),
+          SectionTitle(
+            title: "Recently Viewed",
+            onTap: () {
+              // go to list of recents
+              context.push(seeAllRecentsPath);
+            },
+          ),
 
           // your books
           const RecentlyViewedBooks(),

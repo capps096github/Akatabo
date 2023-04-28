@@ -6,14 +6,15 @@ class AkataboHome extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
     final userStream = ref.watch(currentUserStreamProvider);
 
     // * Listen to the user stream so that the app user updates automatically
-    return userStream.when(
-      loading: () => const AkataboSplash(),
-      error: (error, stackTrace) => ErrorWidget(error),
-      data: (_) => const HomeBody(),
+    return AkataboSplash(
+      screen: userStream.when(
+        loading: () => const SplashScreen(),
+        error: (error, stackTrace) => ErrorWidget(error),
+        data: (_) => const HomeBody(),
+      ),
     );
   }
 }

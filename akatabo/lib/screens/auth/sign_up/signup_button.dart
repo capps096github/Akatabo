@@ -1,6 +1,5 @@
 // Project imports:
 import '../../../akatabo_exporter.dart';
-import '../auth_page.dart';
 import '../functions/auth_fx.dart';
 
 class SignUpButton extends ConsumerStatefulWidget {
@@ -40,7 +39,7 @@ class _SignUpButtonState extends ConsumerState<SignUpButton> {
                 currentFocus.unfocus();
               }
 
-              // validate the form 
+              // validate the form
               // and then authenticate if valid
               if (signUpFormKey.currentState!.validate()) {
                 setState(() {
@@ -66,9 +65,9 @@ class _SignUpButtonState extends ConsumerState<SignUpButton> {
                     // clear the form after sign in
                     signUpFormKey.currentState!.reset();
 
-                    // then go to the select level page index
-                    ref.read(authPageIndexProvider.notifier).state =
-                        authPages.indexOf(authPages.last);
+                    //if it is empty then go to the select level page index
+                    // go to setEducLevelPath
+                    ref.read(goRouterProvider).go(setEducLevelPath);
                   },
                 );
 

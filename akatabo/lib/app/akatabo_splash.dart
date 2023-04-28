@@ -1,41 +1,22 @@
 import '../akatabo_exporter.dart';
-import '../screens/auth/auth_background.dart';
 
-class AkataboSplash extends StatelessWidget {
-  const AkataboSplash({super.key});
+class AkataboSplash extends ConsumerWidget {
+  const AkataboSplash({
+    super.key,
+    required this.screen,
+  });
+
+  // screen to show after splash
+  final Widget screen;
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: akataboColor,
-      body: AuthBackground(
-        screen: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            // space
-            Spacer(flex: 3),
+  Widget build(BuildContext context, WidgetRef ref) {
+    final splashWaiter = ref.watch(splashWaiterProvider);
 
-            VerticalSpace(of: spacing16),
-
-            // logo
-            AkataboLogo(),
-            //
-            Text(
-              "The school library in the palm of your hands",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: akataboWhite,
-                fontSize: 16,
-              ),
-            ),
-            Spacer(),
-
-            // space
-            VerticalSpace(of: spacing16),
-          ],
-        ),
-        imagePath: splashImage,
-      ),
+    return splashWaiter.when(
+      data: (_) => screen,
+      loading: () => const SplashScreen(),
+      error: (error, stackTrace) => ErrorWidget(error),
     );
   }
 }

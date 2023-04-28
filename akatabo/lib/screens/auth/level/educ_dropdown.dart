@@ -12,7 +12,8 @@ class EducationLevelDropdown extends ConsumerWidget {
 
     //
     return Container(
-      constraints: const BoxConstraints(maxWidth: maxAuthWidth),
+      constraints:
+          const BoxConstraints(maxWidth: maxAuthWidth, maxHeight: navbarHeight),
       padding: const EdgeInsets.symmetric(
         vertical: spacing2,
         horizontal: spacing24,

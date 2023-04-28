@@ -35,3 +35,4 @@ final List<String> educationLevels = [
 
 // level of education provider
 final levelOfEducProvider = StateProvider((ref) => educationLevels.first);
+

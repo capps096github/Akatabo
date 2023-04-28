@@ -15,3 +15,6 @@ App Template Variables *As Entered By You
 
 
 Run the command `flutter pub run build_runner watch -d` to generate riverpod files and finish the setup.
+
+
+supportLocales:[en, am_ET, ar, as_IN, bg_BG, bn_BD, bs_Latn_BA, ckb, cs_CZ, da_DK, de_DE, el_GR, es_ES, es_US, et_EE, fa_IR, fi_FI, fil, fr, gu_IN, ha_NG, he_IL, hi_IN, hr_HR, hu_HU, id_ID, is_IS, it_IT, kk_KZ, km_KH, kn_IN, ks, lb_LU, lo_LA, lt_LT, lv_LV, mk_MK, ml, mr_IN, ms_MY, my_MM, my_Qaag_ZG, my_ZG, nb_NO, ne_NP, nl_NL, om_ET, or_IN, pa, pl_PL, pt_BR, pt_PT, ro_RO, ru_RU, si_LK, sk_SK, sl_SI, so, sq_AL, sr_Latn_ME, sr_Latn_RS, sv_SE, sw_TZ, ta_IN, te_IN, th_TH, ti_ET, tr_TR, uk_UA, ur_PK, vi_VN, zh, zh_Hant_TW]

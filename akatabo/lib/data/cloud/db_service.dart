@@ -1,22 +1,8 @@
 // ignore_for_file: avoid_print
 
 import '../../akatabo_exporter.dart';
-import '../../screens/auth/auth_page.dart';
-
-final akataboDBServiceProvider = Provider<AkataboDBService>((ref) {
-  final akataboUser = ref.watch(akataboUserProvider);
-
-  //
-  return AkataboDBService(akataboUser: akataboUser);
-});
 
 class AkataboDBService {
-  /// curreent app user at the moment
-  final AkataboUser akataboUser;
-
-  ///we make this take in the current app user so that we don't have to manually pass it in all the time
-  AkataboDBService({required this.akataboUser});
-
 // * Static Methods --------------------------------------------------------------------------------
 
   // ? ---- Users Database Service ----
@@ -59,14 +45,17 @@ class AkataboDBService {
           //user exists then check if their levelOfEduc is empty,
           if (akataboUser.data()?.levelOfEduc == '') {
             //if it is empty then go to the select level page index
-            ref.read(authPageIndexProvider.notifier).state =
-                authPages.indexOf(authPages.last);
+            // go to setEducLevelPath
+            ref.read(goRouterProvider).go(setEducLevelPath);
           }
           //if it is not empty then just return
           return;
         } else {
           //user doesn't exist - create and upload a new user in firestore
-          await uploadAkataboUser(appUser: appUser);
+          await uploadAkataboUser(appUser: appUser).then((_) {
+            // go to home if all is set - Well use the same logic to set the gender for our Calcut app
+            ref.read(goRouterProvider).go(homePath);
+          });
         }
       });
 
@@ -77,9 +66,10 @@ class AkataboDBService {
   /// this function updates the levelOfEduc field of the user
   ///
   /// [levelOfEduc] is the new level of education
-  Future<void> updateLevelOfEduc({required String levelOfEduc}) async {
-    await usersDatabaseRef
-        .doc(akataboUser.userId)
-        .update({'levelOfEduc': levelOfEduc});
+  static Future<void> updateLevelOfEduc({
+    required String levelOfEduc,
+    required String userId,
+  }) async {
+    await usersDatabaseRef.doc(userId).update({'levelOfEduc': levelOfEduc});
   }
 }

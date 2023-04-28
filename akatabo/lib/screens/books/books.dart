@@ -8,7 +8,7 @@ class AkataboBooks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  horizontalPadding8,
+      padding: horizontalPadding8,
       child: CustomScrollView(
         slivers: [
           const SliverVerticalSpace(of: spacing16),
@@ -20,14 +20,24 @@ class AkataboBooks extends StatelessWidget {
           const SliverVerticalSpace(of: spacing16),
 
           // title
-          SectionTitle(title: "Recent", onTap: () {}),
+          SectionTitle(
+              title: "Recent",
+              onTap: () {
+                // go to list of recents
+                context.push(seeAllRecentsPath);
+              }),
 
           const RecentBooksList(),
 
           const SliverVerticalSpace(of: spacing32),
 
           // title
-          SectionTitle(title: "Your Books", onTap: () {}),
+          SectionTitle(
+              title: "My Books",
+              onTap: () {
+                // go to list of recents
+                context.push(seeMyBooksPath);
+              }),
 
           // your books
           const YourBooks(),

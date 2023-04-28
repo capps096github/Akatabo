@@ -12,3 +12,18 @@ final usersDatabaseRef = FirebaseFirestore.instance
           AkataboUser.fromFirestore(userMap: snapshot.data()!),
       toFirestore: (thumbsUser, _) => thumbsUser.toFirestore(),
     );
+
+// ------------------------------------------------------------
+// cart
+const cartDatabasePath = 'akatabo_cart';
+
+/// Links to [cartDatabasePath] database in cloud firestore
+///
+final cartDatabaseRef = FirebaseFirestore.instance
+    .collection(cartDatabasePath)
+    // .doc()
+    // .collection(collectionPath)
+    .withConverter<AkataBook>(
+      fromFirestore: (snapshot, _) => AkataBook.fromFirestore(snapshot.data()!),
+      toFirestore: (book, _) => book.toFirestore(),
+    );

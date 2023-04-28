@@ -6,7 +6,6 @@ final currentUserStreamProvider =
   final User? user = FirebaseAuth.instance.currentUser;
 
   return usersDatabaseRef.doc(user!.uid).snapshots();
-  // return usersDatabaseRef.doc("eYbx1wEQOUQ9JC4mIuqEUO6mjSj2").snapshots();
 });
 
 // * Current user from ID
