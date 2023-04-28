@@ -11,7 +11,9 @@ Future<void> akataboGoogleAuth({required WidgetRef ref}) async {
     GoogleAuthProvider authProvider = GoogleAuthProvider();
 
     try {
-      await auth.signInWithPopup(authProvider).then(uploadUserToCloud);
+      await auth.signInWithPopup(authProvider).then(
+            (userCredential) => uploadUserToCloud(userCredential, ref),
+          );
     } catch (e) {
       // ignore: avoid_print
       print(e);
@@ -35,7 +37,9 @@ Future<void> akataboGoogleAuth({required WidgetRef ref}) async {
 
 // ? Logic Here
       try {
-        await auth.signInWithCredential(credential).then(uploadUserToCloud);
+        await auth
+            .signInWithCredential(credential)
+            .then((userCredential) => uploadUserToCloud(userCredential, ref));
       } on FirebaseAuthException catch (e) {
         checkExceptionAndUpdate(firebaseAuthException: e, ref: ref);
       } catch (e) {
@@ -47,7 +51,10 @@ Future<void> akataboGoogleAuth({required WidgetRef ref}) async {
   }
 }
 
-Future<void> uploadUserToCloud(UserCredential userCredential) async {
+Future<void> uploadUserToCloud(
+  UserCredential userCredential,
+  WidgetRef ref,
+) async {
   final User? user = userCredential.user;
   if (user != null) {
     final akataboUser = AkataboUser(
@@ -68,7 +75,7 @@ Future<void> uploadUserToCloud(UserCredential userCredential) async {
       user.reload(),
 
       /// Upload User
-      AkataboDBService.uploadAkataboGoogleUser(appUser: akataboUser),
+      AkataboDBService.uploadAkataboGoogleUser(appUser: akataboUser, ref: ref),
     ]);
   }
 }

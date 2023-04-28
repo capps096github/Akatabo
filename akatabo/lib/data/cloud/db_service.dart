@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import '../../akatabo_exporter.dart';
+import '../../screens/auth/auth_page.dart';
 
 final akataboDBServiceProvider = Provider<AkataboDBService>((ref) {
   final akataboUser = ref.watch(akataboUserProvider);
@@ -46,14 +47,22 @@ class AkataboDBService {
       });
 
   ///This function uploads the google user to cloud under the [usersDatabaseRef]
-  static Future<void> uploadAkataboGoogleUser(
-          {required AkataboUser appUser}) async =>
+  static Future<void> uploadAkataboGoogleUser({
+    required AkataboUser appUser,
+    required WidgetRef ref,
+  }) async =>
       await usersDatabaseRef
           .doc(appUser.userId)
           .get()
           .then((akataboUser) async {
         if (akataboUser.exists) {
-          //user exists then just return
+          //user exists then check if their levelOfEduc is empty,
+          if (akataboUser.data()?.levelOfEduc == '') {
+            //if it is empty then go to the select level page index
+            ref.read(authPageIndexProvider.notifier).state =
+                authPages.indexOf(authPages.last);
+          }
+          //if it is not empty then just return
           return;
         } else {
           //user doesn't exist - create and upload a new user in firestore
