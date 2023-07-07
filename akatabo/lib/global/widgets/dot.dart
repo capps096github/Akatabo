@@ -1,8 +1,6 @@
 import '../../akatabo_exporter.dart';
 
 /// THis is a dot in a bullet=like format
-///
-
 class Dot extends StatelessWidget {
   const Dot({
     super.key,
