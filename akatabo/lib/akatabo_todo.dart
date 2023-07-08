@@ -12,6 +12,15 @@ class AkataboTODO {
 
   // TODO Highlighting in the and bookmarking for the books use selectable text
 
+  // TODO
+  //  crashlytics
+  //  admob
+  //  analytics via go router
+  //  accessibilty features via semantics (for all text a widget can work for this)
+  //  allow customisaztion for the app
+  //  add testing
+  
+
   // - Disable Screenshots and Screen recording for iOS coz Android be set
 // Books
 // - Highlighting in the and bookmarking

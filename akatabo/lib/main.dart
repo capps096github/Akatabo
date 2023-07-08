@@ -15,7 +15,7 @@ void main() async {
   // to remove the # from the url
   usePathUrlStrategy();
 
-  //
+  // 
   runApp(
     const ProviderScope(
       child: Akatabo(),
